@@ -6,7 +6,8 @@ import { Prisma } from '@prisma/client'
 import sgMail from '@sendgrid/mail'
 import { PubSub } from 'graphql-subscriptions'
 import { findManyCursorConnection } from '@devoxa/prisma-relay-cursor-connection'
-import { differenceInMinutes } from 'date-fns'
+import { differenceInMinutes, formatDistance } from 'date-fns'
+import { enUS, fr } from 'date-fns/locale'
 
 import type { AppConfig, EmailConfig } from 'src/config/config.interface'
 import { EmailValidationArgs } from './args/emailValidation.args'
@@ -20,6 +21,10 @@ import { EMAIL_VALIDATION_LIMIT } from 'src/constants/limits'
 @Injectable()
 export class EmailValidationService {
   private readonly logger = new Logger(EmailValidationService.name)
+  private localeMap = {
+    en: enUS,
+    fr,
+  }
 
   constructor(
     private readonly configService: ConfigService,
@@ -29,13 +34,29 @@ export class EmailValidationService {
 
   replaceVariables = (html: string, emailValidation: EmailValidation) => {
     const appConfig = this.configService.get<AppConfig>('app')
+    const emailConfig = this.configService.get<EmailConfig>('email')
     const validationLink = new URL(
       `reset-password/${emailValidation.token}`,
       appConfig.url,
     )
+
+    const locale = this.localeMap[emailValidation.lang] || enUS
+    const expirationTime = this.formatDurationFromNow(
+      emailConfig.validationExpiration,
+      locale,
+    )
+
     return html
       .replace(/{{validation_code}}/g, emailValidation.code)
       .replace(/{{validation_link}}/g, validationLink.href)
+      .replace(/{{validation_expiration}}/g, expirationTime)
+  }
+
+  formatDurationFromNow(minutes, locale) {
+    const now = new Date()
+    const futureDate = new Date(now.getTime() + minutes * 60000)
+
+    return formatDistance(now, futureDate, { locale: locale, addSuffix: false })
   }
 
   async sendSignupRequest(emailValidation: EmailValidation) {

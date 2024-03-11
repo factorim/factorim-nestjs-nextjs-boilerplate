@@ -34,10 +34,10 @@ const EmailTemplateList: React.FC<EmailTemplateListProps> = ({
           <thead>
             <tr>
               <th className="w-10">{t('common.label.index')}</th>
-              <th>{t('common.label.subject')}</th>
+              <th>{t('email.label.subject')}</th>
               <th>{t('common.label.type')}</th>
               <th>{t('common.label.lang')}</th>
-              <th>{t('common.label.action')}</th>
+              <th>{t('common.label.actions')}</th>
             </tr>
           </thead>
           <tbody>

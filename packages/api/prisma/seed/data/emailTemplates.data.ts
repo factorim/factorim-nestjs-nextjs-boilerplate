@@ -160,7 +160,7 @@ table, td { color: #000000; } #u_body a { color: #0000ee; text-decoration: under
 <p style="font-size: 14px; line-height: 140%;"> </p>
 <p style="font-size: 14px; line-height: 140%;">We’ve received a security request from your <a rel="noopener" href="https://factorim.io" target="_blank">factorim.io</a> Account. Please use the code above to validate your account deletion.</p>
 <p style="font-size: 14px; line-height: 140%;"> </p>
-<p style="font-size: 14px; line-height: 140%;">Note: The code will expire in {{validation_expiration}} minutes, so please verify soon!</p>
+<p style="font-size: 14px; line-height: 140%;">Note: The code will expire in {{validation_expiration}}, so please verify soon!</p>
   </div>
 
       </td>
@@ -326,7 +326,7 @@ table, td { color: #000000; } #u_body a { color: #0000ee; text-decoration: under
                     id: 'jrDEgcmzOX',
                     type: 'text',
                     values: {
-                      text: '<p style="font-size: 14px; line-height: 140%;">Hi there,</p>\n<p style="font-size: 14px; line-height: 140%;"> </p>\n<p style="font-size: 14px; line-height: 140%;">We’ve received a security request from your <a rel="noopener" href="https://factorim.io" target="_blank" data-u-link-value="eyJuYW1lIjoid2ViIiwiYXR0cnMiOnsiaHJlZiI6Int7aHJlZn19IiwidGFyZ2V0Ijoie3t0YXJnZXR9fSJ9LCJ2YWx1ZXMiOnsiaHJlZiI6Imh0dHBzOi8vZ2FtZW5pY2hlLmFwcCIsInRhcmdldCI6Il9ibGFuayJ9fQ==">factorim.io</a> Account. Please use the code above to validate your account deletion.</p>\n<p style="font-size: 14px; line-height: 140%;"> </p>\n<p style="font-size: 14px; line-height: 140%;">Note: The code will expire in {{validation_expiration}} minutes, so please verify soon!</p>',
+                      text: '<p style="font-size: 14px; line-height: 140%;">Hi there,</p>\n<p style="font-size: 14px; line-height: 140%;"> </p>\n<p style="font-size: 14px; line-height: 140%;">We’ve received a security request from your <a rel="noopener" href="https://factorim.io" target="_blank" data-u-link-value="eyJuYW1lIjoid2ViIiwiYXR0cnMiOnsiaHJlZiI6Int7aHJlZn19IiwidGFyZ2V0Ijoie3t0YXJnZXR9fSJ9LCJ2YWx1ZXMiOnsiaHJlZiI6Imh0dHBzOi8vZ2FtZW5pY2hlLmFwcCIsInRhcmdldCI6Il9ibGFuayJ9fQ==">factorim.io</a> Account. Please use the code above to validate your account deletion.</p>\n<p style="font-size: 14px; line-height: 140%;"> </p>\n<p style="font-size: 14px; line-height: 140%;">Note: The code will expire in {{validation_expiration}}, so please verify soon!</p>',
                       _meta: {
                         htmlID: 'u_content_text_4',
                         htmlClassNames: 'u_content_text',
@@ -1103,7 +1103,7 @@ table, td { color: #000000; } #u_body a { color: #0000ee; text-decoration: under
 <p style="font-size: 14px; line-height: 140%;"> </p>
 <p style="font-size: 14px; line-height: 140%;">We’ve received a security request from your <a rel="noopener" href="https://factorim.io" target="_blank">factorim.io</a> Account. Please use the code above to verify ownership of your email.</p>
 <p style="font-size: 14px; line-height: 140%;"> </p>
-<p style="font-size: 14px; line-height: 140%;">Note: The code will expire in {{validation_expiration}} minutes, so please verify soon!</p>
+<p style="font-size: 14px; line-height: 140%;">Note: The code will expire in {{validation_expiration}}, so please verify soon!</p>
   </div>
 
       </td>
@@ -1269,7 +1269,7 @@ table, td { color: #000000; } #u_body a { color: #0000ee; text-decoration: under
                     id: '22ATGFKCGb',
                     type: 'text',
                     values: {
-                      text: '<p style="font-size: 14px; line-height: 140%;">Hi there,</p>\n<p style="font-size: 14px; line-height: 140%;"> </p>\n<p style="font-size: 14px; line-height: 140%;">We’ve received a security request from your <a rel="noopener" href="https://factorim.io" target="_blank" data-u-link-value="eyJuYW1lIjoid2ViIiwiYXR0cnMiOnsiaHJlZiI6Int7aHJlZn19IiwidGFyZ2V0Ijoie3t0YXJnZXR9fSJ9LCJ2YWx1ZXMiOnsiaHJlZiI6Imh0dHBzOi8vZ2FtZW5pY2hlLmFwcCIsInRhcmdldCI6Il9ibGFuayJ9fQ==">factorim.io</a> Account. Please use the code above to verify ownership of your email.</p>\n<p style="font-size: 14px; line-height: 140%;"> </p>\n<p style="font-size: 14px; line-height: 140%;">Note: The code will expire in {{validation_expiration}} minutes, so please verify soon!</p>',
+                      text: '<p style="font-size: 14px; line-height: 140%;">Hi there,</p>\n<p style="font-size: 14px; line-height: 140%;"> </p>\n<p style="font-size: 14px; line-height: 140%;">We’ve received a security request from your <a rel="noopener" href="https://factorim.io" target="_blank" data-u-link-value="eyJuYW1lIjoid2ViIiwiYXR0cnMiOnsiaHJlZiI6Int7aHJlZn19IiwidGFyZ2V0Ijoie3t0YXJnZXR9fSJ9LCJ2YWx1ZXMiOnsiaHJlZiI6Imh0dHBzOi8vZ2FtZW5pY2hlLmFwcCIsInRhcmdldCI6Il9ibGFuayJ9fQ==">factorim.io</a> Account. Please use the code above to verify ownership of your email.</p>\n<p style="font-size: 14px; line-height: 140%;"> </p>\n<p style="font-size: 14px; line-height: 140%;">Note: The code will expire in {{validation_expiration}}, so please verify soon!</p>',
                       _meta: {
                         htmlID: 'u_content_text_4',
                         htmlClassNames: 'u_content_text',
@@ -2047,7 +2047,7 @@ table, td { color: #000000; } #u_body a { color: #0000ee; text-decoration: under
     <p style="font-size: 14px; line-height: 140%;"> </p>
     <p style="font-size: 14px; line-height: 140%;">We’ve received a security request from your <a rel="noopener" href="https://factorim.io" target="_blank">factorim.io</a> Account. Please use the link above to reset your password.</p>
     <p style="font-size: 14px; line-height: 140%;"> </p>
-    <p style="font-size: 14px; line-height: 140%;">Note: The link will expire in {{validation_expiration}} minutes, so please verify soon!</p>
+    <p style="font-size: 14px; line-height: 140%;">Note: The link will expire in {{validation_expiration}}, so please verify soon!</p>
       </div>
     
           </td>
@@ -2216,7 +2216,7 @@ table, td { color: #000000; } #u_body a { color: #0000ee; text-decoration: under
                     id: 'DHmFOGQHn-',
                     type: 'text',
                     values: {
-                      text: '<p style="font-size: 14px; line-height: 140%;">Hi there,</p>\n<p style="font-size: 14px; line-height: 140%;"> </p>\n<p style="font-size: 14px; line-height: 140%;">We’ve received a security request from your <a rel="noopener" href="https://factorim.io" target="_blank" data-u-link-value="eyJuYW1lIjoid2ViIiwiYXR0cnMiOnsiaHJlZiI6Int7aHJlZn19IiwidGFyZ2V0Ijoie3t0YXJnZXR9fSJ9LCJ2YWx1ZXMiOnsiaHJlZiI6Imh0dHBzOi8vZ2FtZW5pY2hlLmFwcCIsInRhcmdldCI6Il9ibGFuayJ9fQ==">factorim.io</a> Account. Please use the link above to reset your password.</p>\n<p style="font-size: 14px; line-height: 140%;"> </p>\n<p style="font-size: 14px; line-height: 140%;">Note: The link will expire in {{validation_expiration}} minutes, so please verify soon!</p>',
+                      text: '<p style="font-size: 14px; line-height: 140%;">Hi there,</p>\n<p style="font-size: 14px; line-height: 140%;"> </p>\n<p style="font-size: 14px; line-height: 140%;">We’ve received a security request from your <a rel="noopener" href="https://factorim.io" target="_blank" data-u-link-value="eyJuYW1lIjoid2ViIiwiYXR0cnMiOnsiaHJlZiI6Int7aHJlZn19IiwidGFyZ2V0Ijoie3t0YXJnZXR9fSJ9LCJ2YWx1ZXMiOnsiaHJlZiI6Imh0dHBzOi8vZ2FtZW5pY2hlLmFwcCIsInRhcmdldCI6Il9ibGFuayJ9fQ==">factorim.io</a> Account. Please use the link above to reset your password.</p>\n<p style="font-size: 14px; line-height: 140%;"> </p>\n<p style="font-size: 14px; line-height: 140%;">Note: The link will expire in {{validation_expiration}}, so please verify soon!</p>',
                       _meta: {
                         htmlID: 'u_content_text_4',
                         htmlClassNames: 'u_content_text',
@@ -2531,7 +2531,7 @@ table, td { color: #000000; } #u_body a { color: #0000ee; text-decoration: under
     <p style="font-size: 14px; line-height: 140%;"> </p>
     <p style="font-size: 14px; line-height: 140%;">Nous avons reçu une demande de sécurité de votre compte <a rel="noopener" href="https://factorim.io" target="_blank">factorim.io</a>. Veuillez utiliser le lien ci-dessus pour réinitialiser votre mot de passe.</p>
     <p style="font-size: 14px; line-height: 140%;"> </p>
-    <p style="font-size: 14px; line-height: 140%;">Remarque : Le lien expirera dans {{validation_expiration}} minutes, veuillez donc le vérifier rapidement !</p>
+    <p style="font-size: 14px; line-height: 140%;">Remarque : Le lien expirera dans {{validation_expiration}}, veuillez donc le vérifier rapidement !</p>
       </div>
     
           </td>
@@ -2700,7 +2700,7 @@ table, td { color: #000000; } #u_body a { color: #0000ee; text-decoration: under
                     id: 'FXYj3iiTN3',
                     type: 'text',
                     values: {
-                      text: '<p style="font-size: 14px; line-height: 140%;">Bonjour,</p>\n<p style="font-size: 14px; line-height: 140%;"> </p>\n<p style="font-size: 14px; line-height: 140%;">Nous avons reçu une demande de sécurité de votre compte <a rel="noopener" href="https://factorim.io" target="_blank" data-u-link-value="eyJuYW1lIjoid2ViIiwiYXR0cnMiOnsiaHJlZiI6Int7aHJlZn19IiwidGFyZ2V0Ijoie3t0YXJnZXR9fSJ9LCJ2YWx1ZXMiOnsiaHJlZiI6Imh0dHBzOi8vZ2FtZW5pY2hlLmFwcCIsInRhcmdldCI6Il9ibGFuayJ9fQ==">factorim.io</a>. Veuillez utiliser le lien ci-dessus pour réinitialiser votre mot de passe.</p>\n<p style="font-size: 14px; line-height: 140%;"> </p>\n<p style="font-size: 14px; line-height: 140%;">Remarque : Le lien expirera dans {{validation_expiration}} minutes, veuillez donc le vérifier rapidement !</p>',
+                      text: '<p style="font-size: 14px; line-height: 140%;">Bonjour,</p>\n<p style="font-size: 14px; line-height: 140%;"> </p>\n<p style="font-size: 14px; line-height: 140%;">Nous avons reçu une demande de sécurité de votre compte <a rel="noopener" href="https://factorim.io" target="_blank" data-u-link-value="eyJuYW1lIjoid2ViIiwiYXR0cnMiOnsiaHJlZiI6Int7aHJlZn19IiwidGFyZ2V0Ijoie3t0YXJnZXR9fSJ9LCJ2YWx1ZXMiOnsiaHJlZiI6Imh0dHBzOi8vZ2FtZW5pY2hlLmFwcCIsInRhcmdldCI6Il9ibGFuayJ9fQ==">factorim.io</a>. Veuillez utiliser le lien ci-dessus pour réinitialiser votre mot de passe.</p>\n<p style="font-size: 14px; line-height: 140%;"> </p>\n<p style="font-size: 14px; line-height: 140%;">Remarque : Le lien expirera dans {{validation_expiration}}, veuillez donc le vérifier rapidement !</p>',
                       _meta: {
                         htmlID: 'u_content_text_4',
                         htmlClassNames: 'u_content_text',
@@ -3014,7 +3014,7 @@ table, td { color: #000000; } #u_body a { color: #0000ee; text-decoration: under
 <p style="font-size: 14px; line-height: 140%;"> </p>
 <p style="font-size: 14px; line-height: 140%;">We’ve received a security request from your <a rel="noopener" href="https://factorim.io" target="_blank">factorim.io</a> Account. Please use the code above to validate your account.</p>
 <p style="font-size: 14px; line-height: 140%;"> </p>
-<p style="font-size: 14px; line-height: 140%;">Note: The code will expire in {{validation_expiration}} minutes, so please verify soon!</p>
+<p style="font-size: 14px; line-height: 140%;">Note: The code will expire in {{validation_expiration}}, so please verify soon!</p>
   </div>
 
       </td>
@@ -3180,7 +3180,7 @@ table, td { color: #000000; } #u_body a { color: #0000ee; text-decoration: under
                     id: 'oyw_wXoAsi',
                     type: 'text',
                     values: {
-                      text: '<p style="font-size: 14px; line-height: 140%;">Hi there,</p>\n<p style="font-size: 14px; line-height: 140%;"> </p>\n<p style="font-size: 14px; line-height: 140%;">We’ve received a security request from your <a rel="noopener" href="https://factorim.io" target="_blank" data-u-link-value="eyJuYW1lIjoid2ViIiwiYXR0cnMiOnsiaHJlZiI6Int7aHJlZn19IiwidGFyZ2V0Ijoie3t0YXJnZXR9fSJ9LCJ2YWx1ZXMiOnsiaHJlZiI6Imh0dHBzOi8vZ2FtZW5pY2hlLmFwcCIsInRhcmdldCI6Il9ibGFuayJ9fQ==">factorim.io</a> Account. Please use the code above to validate your account.</p>\n<p style="font-size: 14px; line-height: 140%;"> </p>\n<p style="font-size: 14px; line-height: 140%;">Note: The code will expire in {{validation_expiration}} minutes, so please verify soon!</p>',
+                      text: '<p style="font-size: 14px; line-height: 140%;">Hi there,</p>\n<p style="font-size: 14px; line-height: 140%;"> </p>\n<p style="font-size: 14px; line-height: 140%;">We’ve received a security request from your <a rel="noopener" href="https://factorim.io" target="_blank" data-u-link-value="eyJuYW1lIjoid2ViIiwiYXR0cnMiOnsiaHJlZiI6Int7aHJlZn19IiwidGFyZ2V0Ijoie3t0YXJnZXR9fSJ9LCJ2YWx1ZXMiOnsiaHJlZiI6Imh0dHBzOi8vZ2FtZW5pY2hlLmFwcCIsInRhcmdldCI6Il9ibGFuayJ9fQ==">factorim.io</a> Account. Please use the code above to validate your account.</p>\n<p style="font-size: 14px; line-height: 140%;"> </p>\n<p style="font-size: 14px; line-height: 140%;">Note: The code will expire in {{validation_expiration}}, so please verify soon!</p>',
                       _meta: {
                         htmlID: 'u_content_text_4',
                         htmlClassNames: 'u_content_text',

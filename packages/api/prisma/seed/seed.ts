@@ -68,7 +68,6 @@ async function main() {
   }
 
   const postExists = await prisma.post.findFirst()
-  await seedPosts()
   if (!postExists) {
     await seedPosts()
   } else {

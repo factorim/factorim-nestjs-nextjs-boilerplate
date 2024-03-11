@@ -1,0 +1,61 @@
+name: "Create App .env File"
+description: "Creates a .env file with specified environment variables"
+inputs:
+  node_env:
+    description: "Node environment"
+    required: true
+  graphql_url:
+    description: "GraphQL URL"
+    required: true
+  graphql_ws_url:
+    description: "GraphQL WebSocket URL"
+    required: true
+  internal_graphql_url:
+    description: "GraphQL URL"
+    required: true
+  internal_graphql_ws_url:
+    description: "GraphQL WebSocket URL"
+    required: true
+  auth_secret:
+    description: "Auth Secret"
+    required: true
+  auth_jwt_refresh_in:
+    description: "Auth JWT Refresh In"
+    required: true
+  auth_session_max_age:
+    description: "Auth Session Max Age"
+    required: true
+  auth_google_client_id:
+    description: "Auth Google Client Id"
+    required: true
+  auth_google_client_secret:
+    description: "Auth Google Client Secret"
+    required: true
+  social_github_url:
+    description: "Socal GitHub URL"
+    required: true
+  social_twitter_url:
+    description: "Socal Twitter URL"
+    required: true
+  gtm_id:
+    description: "Google Tag Manager Id"
+    required: true
+runs:
+  using: "composite"
+  steps:
+    - run: |
+        echo "NODE_ENV=${{ inputs.node_env }}" >> .env
+        echo "API_GRAPHQL_URL=${{ inputs.graphql_url }}" >> .env
+        echo "API_GRAPHQL_WS_URL=${{ inputs.graphql_ws_url }}" >> .env
+        echo "FACTORIM_INTERNAL_API_GRAPHQL_URL=${{ inputs.internal_graphql_url }}" >> .env
+        echo "FACTORIM_INTERNAL_API_GRAPHQL_WS_URL=${{ inputs.internal_graphql_ws_url }}" >> .env
+        echo "AUTH_SECRET=${{ inputs.auth_secret }}" >> .env
+        echo "AUTH_JWT_REFRESH_IN=${{ inputs.auth_jwt_refresh_in }}" >> .env
+        echo "AUTH_SESSION_MAX_AGE=${{ inputs.auth_session_max_age }}" >> .env
+        echo "AUTH_GOOGLE_CLIENT_ID=${{ inputs.auth_google_client_id }}" >> .env
+        echo "AUTH_GOOGLE_CLIENT_SECRET=${{ inputs.auth_google_client_secret }}" >> .env
+        echo "SOCIAL_GITHUB_URL=${{ inputs.social_github_url }}" >> .env
+        echo "SOCIAL_TWITTER_URL=${{ inputs.social_twitter_url }}" >> .env
+        echo "GOOGLE_TAG_MANAGER_ID=${{ inputs.gtm_id }}" >> .env
+      shell: bash
+      working-directory: ./packages/app

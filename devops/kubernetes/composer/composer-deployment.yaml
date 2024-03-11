@@ -1,0 +1,36 @@
+composerVersion: apps/v1
+kind: Deployment
+metadata:
+  name: factorim-composer-deployment
+  labels:
+    app: factorim-composer
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: factorim-composer
+  template:
+    metadata:
+      labels:
+        app: factorim-composer
+    spec:
+      containers:
+        - name: factorim-composer
+          image: ghcr.io/factorim/factorim-nestjs-nextjs-boilerplate/factorim-composer:1.0.0
+          ports:
+            - containerPort: 3000
+          env:
+            - name: NODE_ENV
+              value: production
+            - name: PORT
+              value: "3000"
+            - name: API_GRAPHQL_URL
+              value: http://api.factorim.io:4000/graphql
+            - name: API_GRAPHQL_WS_URL
+              value: http://api.factorim.io:4000/graphql
+            - name: API_KEY
+              value: JustChangeMe
+            - name: OPENAI_API_KEY
+              value: JustChangeMe
+      imagePullSecrets:
+        - name: regcred

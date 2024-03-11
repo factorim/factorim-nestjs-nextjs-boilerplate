@@ -1,0 +1,23 @@
+version: "3.7"
+
+services:
+  factorim-postgres:
+    container_name: factorim-postgres
+    image: postgres:16.1-alpine
+    command: -p ${PORT}
+    ports:
+      - ${PORT}:${PORT}
+    volumes:
+      - factorim-postgres-data:/var/lib/postgresql/data
+    env_file:
+      - .env
+    restart: always
+    networks:
+      - factorim-network
+
+volumes:
+  factorim-postgres-data:
+
+networks:
+  factorim-network:
+    external: true

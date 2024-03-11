@@ -1,0 +1,6 @@
+export { ChangeEmail } from './ChangeEmail'
+export { ChangeNameForm } from './ChangeNameForm'
+export { ChangePasswordForm } from './ChangePasswordForm'
+export { DeleteAccount } from './DeleteAccount'
+export { ChangeLangForm } from './ChangeLangForm'
+export { ChangeThemeForm } from './ChangeThemeForm'

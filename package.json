@@ -1,0 +1,22 @@
+{
+  "name": "factorim-nestjs-nextjs-boilerplate",
+  "version": "1.0.0",
+  "description": "Factorim NestJS Next.JS Boilerplate",
+  "author": "Factorim",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/factorim/factorim-nestjs-nextjs-boilerplate.git"
+  },
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/factorim/factorim-nestjs-nextjs-boilerplate/issues"
+  },
+  "homepage": "https://github.com/factorim/factorim-nestjs-nextjs-boilerplate#readme",
+  "scripts": {
+    "prepare": "husky install",
+    "prepush": "./scripts/pre-push.sh"
+  },
+  "devDependencies": {
+    "husky": "^7.0.4"
+  }
+}

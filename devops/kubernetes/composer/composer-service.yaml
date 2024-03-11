@@ -1,0 +1,13 @@
+composerVersion: v1
+kind: Service
+metadata:
+  name: factorim-composer-service
+spec:
+  selector:
+    app: factorim-composer
+  ports:
+    - protocol: TCP
+      port: 3000
+      targetPort: 3000
+      nodePort: 30040
+  type: NodePort

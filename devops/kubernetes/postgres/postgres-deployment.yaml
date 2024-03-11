@@ -1,0 +1,33 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: factorim-postgres-deployment
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: factorim-postgres
+  template:
+    metadata:
+      labels:
+        app: factorim-postgres
+    spec:
+      containers:
+        - name: factorim-postgres
+          image: postgres:latest
+          env:
+            - name: POSTGRES_USER
+              value: factorim
+            - name: POSTGRES_PASSWORD
+              value: JustChangeMe
+            - name: POSTGRES_DB
+              value: factorimdb
+          ports:
+            - containerPort: 5432
+          volumeMounts:
+            - mountPath: /var/lib/postgresql/data
+              name: factorim-postgres-storage
+      volumes:
+        - name: factorim-postgres-storage
+          persistentVolumeClaim:
+            claimName: factorim-postgres-pvc

@@ -1,0 +1,48 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: factorim-app-deployment
+  labels:
+    app: factorim-app
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: factorim-app
+  template:
+    metadata:
+      labels:
+        app: factorim-app
+    spec:
+      containers:
+        - name: factorim-app
+          image: ghcr.io/factorim/factorim-nestjs-nextjs-boilerplate/factorim-app:1.0.0
+          ports:
+            - containerPort: 3000
+          env:
+            - name: NEXT_PUBLIC_API_GRAPHQL_URL
+              value: https://api.boilerplate.factorim.io/graphql
+            - name: NEXT_PUBLIC_API_GRAPHQL_WS_URL
+              value: wss://api.boilerplate.factorim.io/graphql
+            - name: API_INTERNAL_GRAPHQL_URL
+              value: http://factorim-api-demo/graphql
+            - name: API_INTERNAL_GRAPHQL_WS_URL
+              value: ws://factorim-api-demo/graphql
+            - name: AUTH_SECRET
+              value: JustChangeMe
+            - name: AUTH_SESSION_MAX_AGE
+              value: 604800
+            - name: AUTH_GOOGLE_CLIENT_ID
+              value: JustChangeMe
+            - name: AUTH_GOOGLE_CLIENT_SECRET
+              value: JustChangeMe
+            - name: NEXT_PUBLIC_AUTH_JWT_REFRESH_IN
+              value: 300
+            - name: NEXT_PUBLIC_SOCIAL_GITHUB_URL
+              value: https://github.com/factorim/factorim-nestjs-nextjs-boilerplate
+            - name: NEXT_PUBLIC_SOCIAL_TWITTER_URL
+              value: https://twitter.com/factorimio
+            - name: NEXT_PUBLIC_GOOGLE_TAG_MANAGER_ID
+              value: GTM-5VSFX7TR
+      imagePullSecrets:
+        - name: regcred

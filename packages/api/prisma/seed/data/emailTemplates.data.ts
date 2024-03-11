@@ -1889,223 +1889,225 @@ table, td { color: #000000; } #u_body a { color: #0000ee; text-decoration: under
   },
   {
     type: EmailType.RESET_PASSWORD,
-    subject: 'Password reset code',
+    subject: 'Reset your password',
     lang: Lang.en,
     html: `<!DOCTYPE HTML PUBLIC "-//W3C//DTD XHTML 1.0 Transitional //EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml" xmlns:v="urn:schemas-microsoft-com:vml" xmlns:o="urn:schemas-microsoft-com:office:office">
-<head>
-<!--[if gte mso 9]>
-<xml>
-  <o:OfficeDocumentSettings>
-    <o:AllowPNG/>
-    <o:PixelsPerInch>96</o:PixelsPerInch>
-  </o:OfficeDocumentSettings>
-</xml>
-<![endif]-->
-  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="x-apple-disable-message-reformatting">
-  <!--[if !mso]><!--><meta http-equiv="X-UA-Compatible" content="IE=edge"><!--<![endif]-->
-  <title></title>
-  
-    <style type="text/css">
-      @media only screen and (min-width: 520px) {
-  .u-row {
-    width: 500px !important;
-  }
-  .u-row .u-col {
-    vertical-align: top;
-  }
-
-  .u-row .u-col-100 {
-    width: 500px !important;
-  }
-
-}
-
-@media (max-width: 520px) {
-  .u-row-container {
-    max-width: 100% !important;
-    padding-left: 0px !important;
-    padding-right: 0px !important;
-  }
-  .u-row .u-col {
-    min-width: 320px !important;
-    max-width: 100% !important;
-    display: block !important;
-  }
-  .u-row {
-    width: 100% !important;
-  }
-  .u-col {
-    width: 100% !important;
-  }
-  .u-col > div {
-    margin: 0 auto;
-  }
-}
-body {
-  margin: 0;
-  padding: 0;
-}
-
-table,
-tr,
-td {
-  vertical-align: top;
-  border-collapse: collapse;
-}
-
-p {
-  margin: 0;
-}
-
-.ie-container table,
-.mso-container table {
-  table-layout: fixed;
-}
-
-* {
-  line-height: inherit;
-}
-
-a[x-apple-data-detectors='true'] {
-  color: inherit !important;
-  text-decoration: none !important;
-}
-
-table, td { color: #000000; } #u_body a { color: #0000ee; text-decoration: underline; }
-    </style>
-  
-  
-
-</head>
-
-<body class="clean-body u_body" style="margin: 0;padding: 0;-webkit-text-size-adjust: 100%;background-color: #e7e7e7;color: #000000">
-  <!--[if IE]><div class="ie-container"><![endif]-->
-  <!--[if mso]><div class="mso-container"><![endif]-->
-  <table id="u_body" style="border-collapse: collapse;table-layout: fixed;border-spacing: 0;mso-table-lspace: 0pt;mso-table-rspace: 0pt;vertical-align: top;min-width: 320px;Margin: 0 auto;background-color: #e7e7e7;width:100%" cellpadding="0" cellspacing="0">
-  <tbody>
-  <tr style="vertical-align: top">
-    <td style="word-break: break-word;border-collapse: collapse !important;vertical-align: top">
-    <!--[if (mso)|(IE)]><table width="100%" cellpadding="0" cellspacing="0" border="0"><tr><td align="center" style="background-color: #e7e7e7;"><![endif]-->
-    
-
-<div class="u-row-container" style="padding: 0px;background-color: transparent">
-  <div class="u-row" style="Margin: 0 auto;min-width: 320px;max-width: 500px;overflow-wrap: break-word;word-wrap: break-word;word-break: break-word;background-color: transparent;">
-    <div style="border-collapse: collapse;display: table;width: 100%;height: 100%;background-color: transparent;">
-      <!--[if (mso)|(IE)]><table width="100%" cellpadding="0" cellspacing="0" border="0"><tr><td style="padding: 0px;background-color: transparent;" align="center"><table cellpadding="0" cellspacing="0" border="0" style="width:500px;"><tr style="background-color: transparent;"><![endif]-->
+    <html xmlns="http://www.w3.org/1999/xhtml" xmlns:v="urn:schemas-microsoft-com:vml" xmlns:o="urn:schemas-microsoft-com:office:office">
+    <head>
+    <!--[if gte mso 9]>
+    <xml>
+      <o:OfficeDocumentSettings>
+        <o:AllowPNG/>
+        <o:PixelsPerInch>96</o:PixelsPerInch>
+      </o:OfficeDocumentSettings>
+    </xml>
+    <![endif]-->
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="x-apple-disable-message-reformatting">
+      <!--[if !mso]><!--><meta http-equiv="X-UA-Compatible" content="IE=edge"><!--<![endif]-->
+      <title></title>
       
-<!--[if (mso)|(IE)]><td align="center" width="500" style="width: 500px;padding: 0px;border-top: 0px solid transparent;border-left: 0px solid transparent;border-right: 0px solid transparent;border-bottom: 0px solid transparent;" valign="top"><![endif]-->
-<div class="u-col u-col-100" style="max-width: 320px;min-width: 500px;display: table-cell;vertical-align: top;">
-  <div style="height: 100%;width: 100% !important;">
-  <!--[if (!mso)&(!IE)]><!--><div style="height: 100%; padding: 0px;border-top: 0px solid transparent;border-left: 0px solid transparent;border-right: 0px solid transparent;border-bottom: 0px solid transparent;"><!--<![endif]-->
-  
-<table style="font-family:arial,helvetica,sans-serif;" role="presentation" cellpadding="0" cellspacing="0" width="100%" border="0">
-  <tbody>
-    <tr>
-      <td style="overflow-wrap:break-word;word-break:break-word;padding:10px 10px 40px;font-family:arial,helvetica,sans-serif;" align="left">
+        <style type="text/css">
+          @media only screen and (min-width: 520px) {
+      .u-row {
+        width: 500px !important;
+      }
+      .u-row .u-col {
+        vertical-align: top;
+      }
+    
+      .u-row .u-col-100 {
+        width: 500px !important;
+      }
+    
+    }
+    
+    @media (max-width: 520px) {
+      .u-row-container {
+        max-width: 100% !important;
+        padding-left: 0px !important;
+        padding-right: 0px !important;
+      }
+      .u-row .u-col {
+        min-width: 320px !important;
+        max-width: 100% !important;
+        display: block !important;
+      }
+      .u-row {
+        width: 100% !important;
+      }
+      .u-col {
+        width: 100% !important;
+      }
+      .u-col > div {
+        margin: 0 auto;
+      }
+    }
+    body {
+      margin: 0;
+      padding: 0;
+    }
+    
+    table,
+    tr,
+    td {
+      vertical-align: top;
+      border-collapse: collapse;
+    }
+    
+    p {
+      margin: 0;
+    }
+    
+    .ie-container table,
+    .mso-container table {
+      table-layout: fixed;
+    }
+    
+    * {
+      line-height: inherit;
+    }
+    
+    a[x-apple-data-detectors='true'] {
+      color: inherit !important;
+      text-decoration: none !important;
+    }
+    
+    table, td { color: #000000; } #u_body a { color: #0000ee; text-decoration: underline; }
+        </style>
+      
+      
+    
+    </head>
+    
+    <body class="clean-body u_body" style="margin: 0;padding: 0;-webkit-text-size-adjust: 100%;background-color: #e7e7e7;color: #000000">
+      <!--[if IE]><div class="ie-container"><![endif]-->
+      <!--[if mso]><div class="mso-container"><![endif]-->
+      <table id="u_body" style="border-collapse: collapse;table-layout: fixed;border-spacing: 0;mso-table-lspace: 0pt;mso-table-rspace: 0pt;vertical-align: top;min-width: 320px;Margin: 0 auto;background-color: #e7e7e7;width:100%" cellpadding="0" cellspacing="0">
+      <tbody>
+      <tr style="vertical-align: top">
+        <td style="word-break: break-word;border-collapse: collapse !important;vertical-align: top">
+        <!--[if (mso)|(IE)]><table width="100%" cellpadding="0" cellspacing="0" border="0"><tr><td align="center" style="background-color: #e7e7e7;"><![endif]-->
         
-<table width="100%" cellpadding="0" cellspacing="0" border="0">
-  <tr>
-    <td style="padding-right: 0px;padding-left: 0px;" align="center">
-      <a href="https://factorim.io" target="_blank">
-      <img align="center" border="0" src="https://factorim.io/images/logos/factorim-logo.png" alt="" title="" style="outline: none;text-decoration: none;-ms-interpolation-mode: bicubic;clear: both;display: inline-block !important;border: none;height: auto;float: none;width: 100%;max-width: 238px;" width="238"/>
-      </a>
-    </td>
-  </tr>
-</table>
-
-      </td>
-    </tr>
-  </tbody>
-</table>
-
-<table style="font-family:arial,helvetica,sans-serif;" role="presentation" cellpadding="0" cellspacing="0" width="100%" border="0">
-  <tbody>
-    <tr>
-      <td style="overflow-wrap:break-word;word-break:break-word;padding:10px;font-family:arial,helvetica,sans-serif;" align="left">
-        
-  <div style="line-height: 140%; text-align: left; word-wrap: break-word;">
-    <p style="font-size: 14px; line-height: 140%;"><strong><span style="font-size: 20px; line-height: 28px;">Here’s your security code:</span></strong></p>
-<p style="font-size: 14px; line-height: 140%;">{{validation_code}}</p>
-  </div>
-
-      </td>
-    </tr>
-  </tbody>
-</table>
-
-<table style="font-family:arial,helvetica,sans-serif;" role="presentation" cellpadding="0" cellspacing="0" width="100%" border="0">
-  <tbody>
-    <tr>
-      <td style="overflow-wrap:break-word;word-break:break-word;padding:10px;font-family:arial,helvetica,sans-serif;" align="left">
-        
-  <div style="line-height: 140%; text-align: left; word-wrap: break-word;">
-    <p style="font-size: 14px; line-height: 140%;">Hi there,</p>
-<p style="font-size: 14px; line-height: 140%;"> </p>
-<p style="font-size: 14px; line-height: 140%;">We’ve received a security request from your <a rel="noopener" href="https://factorim.io" target="_blank">factorim.io</a> Account. Please use the code above to reset your password.</p>
-<p style="font-size: 14px; line-height: 140%;"> </p>
-<p style="font-size: 14px; line-height: 140%;">Note: The code will expire in 15 minutes, so please verify soon!</p>
-  </div>
-
-      </td>
-    </tr>
-  </tbody>
-</table>
-
-<table style="font-family:arial,helvetica,sans-serif;" role="presentation" cellpadding="0" cellspacing="0" width="100%" border="0">
-  <tbody>
-    <tr>
-      <td style="overflow-wrap:break-word;word-break:break-word;padding:10px;font-family:arial,helvetica,sans-serif;" align="left">
-        
-  <div style="line-height: 140%; text-align: left; word-wrap: break-word;">
-    <p style="font-size: 14px; line-height: 140%;">Thank you,</p>
-<p style="font-size: 14px; line-height: 140%;"> </p>
-<p style="font-size: 14px; line-height: 140%;">The Factorim Team</p>
-  </div>
-
-      </td>
-    </tr>
-  </tbody>
-</table>
-
-<table style="font-family:arial,helvetica,sans-serif;" role="presentation" cellpadding="0" cellspacing="0" width="100%" border="0">
-  <tbody>
-    <tr>
-      <td style="overflow-wrap:break-word;word-break:break-word;padding:10px;font-family:arial,helvetica,sans-serif;" align="left">
-        
-  <div style="line-height: 140%; text-align: left; word-wrap: break-word;">
-    <p style="font-size: 14px; line-height: 140%; text-align: center;"><strong>Problems or questions?</strong></p>
-<p style="font-size: 14px; line-height: 140%; text-align: center;"><a rel="noopener" href="https://discord.gg/Tv3KVHfQMf" target="_blank">https://discord.gg/Tv3KVHfQMf</a></p>
-  </div>
-
-      </td>
-    </tr>
-  </tbody>
-</table>
-
-  <!--[if (!mso)&(!IE)]><!--></div><!--<![endif]-->
-  </div>
-</div>
-<!--[if (mso)|(IE)]></td><![endif]-->
-      <!--[if (mso)|(IE)]></tr></table></td></tr></table><![endif]-->
+      
+      
+    <div class="u-row-container" style="padding: 0px;background-color: transparent">
+      <div class="u-row" style="margin: 0 auto;min-width: 320px;max-width: 500px;overflow-wrap: break-word;word-wrap: break-word;word-break: break-word;background-color: transparent;">
+        <div style="border-collapse: collapse;display: table;width: 100%;height: 100%;background-color: transparent;">
+          <!--[if (mso)|(IE)]><table width="100%" cellpadding="0" cellspacing="0" border="0"><tr><td style="padding: 0px;background-color: transparent;" align="center"><table cellpadding="0" cellspacing="0" border="0" style="width:500px;"><tr style="background-color: transparent;"><![endif]-->
+          
+    <!--[if (mso)|(IE)]><td align="center" width="500" style="width: 500px;padding: 0px;border-top: 0px solid transparent;border-left: 0px solid transparent;border-right: 0px solid transparent;border-bottom: 0px solid transparent;" valign="top"><![endif]-->
+    <div class="u-col u-col-100" style="max-width: 320px;min-width: 500px;display: table-cell;vertical-align: top;">
+      <div style="height: 100%;width: 100% !important;">
+      <!--[if (!mso)&(!IE)]><!--><div style="box-sizing: border-box; height: 100%; padding: 0px;border-top: 0px solid transparent;border-left: 0px solid transparent;border-right: 0px solid transparent;border-bottom: 0px solid transparent;"><!--<![endif]-->
+      
+    <table style="font-family:arial,helvetica,sans-serif;" role="presentation" cellpadding="0" cellspacing="0" width="100%" border="0">
+      <tbody>
+        <tr>
+          <td style="overflow-wrap:break-word;word-break:break-word;padding:10px 10px 40px;font-family:arial,helvetica,sans-serif;" align="left">
+            
+    <table width="100%" cellpadding="0" cellspacing="0" border="0">
+      <tr>
+        <td style="padding-right: 0px;padding-left: 0px;" align="center">
+          <a href="https://factorim.io" target="_blank">
+          <img align="center" border="0" src="https://factorim.io/images/logos/factorim-logo.png" alt="" title="" style="outline: none;text-decoration: none;-ms-interpolation-mode: bicubic;clear: both;display: inline-block !important;border: none;height: auto;float: none;width: 100%;max-width: 238px;" width="238"/>
+          </a>
+        </td>
+      </tr>
+    </table>
+    
+          </td>
+        </tr>
+      </tbody>
+    </table>
+    
+    <table style="font-family:arial,helvetica,sans-serif;" role="presentation" cellpadding="0" cellspacing="0" width="100%" border="0">
+      <tbody>
+        <tr>
+          <td style="overflow-wrap:break-word;word-break:break-word;padding:10px;font-family:arial,helvetica,sans-serif;" align="left">
+            
+      <div style="font-size: 14px; line-height: 140%; text-align: left; word-wrap: break-word;">
+        <p style="font-size: 14px; line-height: 140%;"><strong><span style="font-size: 20px; line-height: 28px;">Here’s your security link:</span></strong></p>
+    <p style="font-size: 14px; line-height: 140%;">{{validation_link}}</p>
+      </div>
+    
+          </td>
+        </tr>
+      </tbody>
+    </table>
+    
+    <table style="font-family:arial,helvetica,sans-serif;" role="presentation" cellpadding="0" cellspacing="0" width="100%" border="0">
+      <tbody>
+        <tr>
+          <td style="overflow-wrap:break-word;word-break:break-word;padding:10px;font-family:arial,helvetica,sans-serif;" align="left">
+            
+      <div style="font-size: 14px; line-height: 140%; text-align: left; word-wrap: break-word;">
+        <p style="font-size: 14px; line-height: 140%;">Hi there,</p>
+    <p style="font-size: 14px; line-height: 140%;"> </p>
+    <p style="font-size: 14px; line-height: 140%;">We’ve received a security request from your <a rel="noopener" href="https://factorim.io" target="_blank">factorim.io</a> Account. Please use the link above to reset your password.</p>
+    <p style="font-size: 14px; line-height: 140%;"> </p>
+    <p style="font-size: 14px; line-height: 140%;">Note: The link will expire in {{validation_expiration}} minutes, so please verify soon!</p>
+      </div>
+    
+          </td>
+        </tr>
+      </tbody>
+    </table>
+    
+    <table style="font-family:arial,helvetica,sans-serif;" role="presentation" cellpadding="0" cellspacing="0" width="100%" border="0">
+      <tbody>
+        <tr>
+          <td style="overflow-wrap:break-word;word-break:break-word;padding:10px;font-family:arial,helvetica,sans-serif;" align="left">
+            
+      <div style="font-size: 14px; line-height: 140%; text-align: left; word-wrap: break-word;">
+        <p style="font-size: 14px; line-height: 140%;">Thank you,</p>
+    <p style="font-size: 14px; line-height: 140%;"> </p>
+    <p style="font-size: 14px; line-height: 140%;">The Factorim Team</p>
+      </div>
+    
+          </td>
+        </tr>
+      </tbody>
+    </table>
+    
+    <table style="font-family:arial,helvetica,sans-serif;" role="presentation" cellpadding="0" cellspacing="0" width="100%" border="0">
+      <tbody>
+        <tr>
+          <td style="overflow-wrap:break-word;word-break:break-word;padding:10px;font-family:arial,helvetica,sans-serif;" align="left">
+            
+      <div style="font-size: 14px; line-height: 140%; text-align: left; word-wrap: break-word;">
+        <p style="font-size: 14px; line-height: 140%; text-align: center;"><strong>Problems or questions?</strong></p>
+    <p style="font-size: 14px; line-height: 140%; text-align: center;"><a rel="noopener" href="https://discord.gg/Tv3KVHfQMf" target="_blank">https://discord.gg/Tv3KVHfQMf</a></p>
+      </div>
+    
+          </td>
+        </tr>
+      </tbody>
+    </table>
+    
+      <!--[if (!mso)&(!IE)]><!--></div><!--<![endif]-->
+      </div>
     </div>
-  </div>
-</div>
-
-
-    <!--[if (mso)|(IE)]></td></tr></table><![endif]-->
-    </td>
-  </tr>
-  </tbody>
-  </table>
-  <!--[if mso]></div><![endif]-->
-  <!--[if IE]></div><![endif]-->
-</body>
-
-</html>
-`,
+    <!--[if (mso)|(IE)]></td><![endif]-->
+          <!--[if (mso)|(IE)]></tr></table></td></tr></table><![endif]-->
+        </div>
+      </div>
+      </div>
+      
+    
+    
+        <!--[if (mso)|(IE)]></td></tr></table><![endif]-->
+        </td>
+      </tr>
+      </tbody>
+      </table>
+      <!--[if mso]></div><![endif]-->
+      <!--[if IE]></div><![endif]-->
+    </body>
+    
+    </html>
+    `,
     design: {
       body: {
         id: 'Q7M_xrxQeG',
@@ -2183,12 +2185,13 @@ table, td { color: #000000; } #u_body a { color: #0000ee; text-decoration: under
                     id: '5sqvqyJNzU',
                     type: 'text',
                     values: {
-                      text: '<p style="font-size: 14px; line-height: 140%;"><strong><span style="font-size: 20px; line-height: 28px;">Here’s your security code:</span></strong></p>\n<p style="font-size: 14px; line-height: 140%;">{{validation_code}}</p>',
+                      text: '<p style="font-size: 14px; line-height: 140%;"><strong><span style="font-size: 20px; line-height: 28px;">Here’s your security link:</span></strong></p>\n<p style="font-size: 14px; line-height: 140%;">{{validation_link}}</p>',
                       _meta: {
                         htmlID: 'u_content_text_1',
                         htmlClassNames: 'u_content_text',
                       },
                       anchor: '',
+                      fontSize: '14px',
                       hideable: true,
                       deletable: true,
                       draggable: true,
@@ -2207,17 +2210,19 @@ table, td { color: #000000; } #u_body a { color: #0000ee; text-decoration: under
                       containerPadding: '10px',
                       displayCondition: null,
                     },
+                    hasDeprecatedFontControls: true,
                   },
                   {
                     id: 'DHmFOGQHn-',
                     type: 'text',
                     values: {
-                      text: '<p style="font-size: 14px; line-height: 140%;">Hi there,</p>\n<p style="font-size: 14px; line-height: 140%;"> </p>\n<p style="font-size: 14px; line-height: 140%;">We’ve received a security request from your <a rel="noopener" href="https://factorim.io" target="_blank" data-u-link-value="eyJuYW1lIjoid2ViIiwiYXR0cnMiOnsiaHJlZiI6Int7aHJlZn19IiwidGFyZ2V0Ijoie3t0YXJnZXR9fSJ9LCJ2YWx1ZXMiOnsiaHJlZiI6Imh0dHBzOi8vZ2FtZW5pY2hlLmFwcCIsInRhcmdldCI6Il9ibGFuayJ9fQ==">factorim.io</a> Account. Please use the code above to reset your password.</p>\n<p style="font-size: 14px; line-height: 140%;"> </p>\n<p style="font-size: 14px; line-height: 140%;">Note: The code will expire in 15 minutes, so please verify soon!</p>',
+                      text: '<p style="font-size: 14px; line-height: 140%;">Hi there,</p>\n<p style="font-size: 14px; line-height: 140%;"> </p>\n<p style="font-size: 14px; line-height: 140%;">We’ve received a security request from your <a rel="noopener" href="https://factorim.io" target="_blank" data-u-link-value="eyJuYW1lIjoid2ViIiwiYXR0cnMiOnsiaHJlZiI6Int7aHJlZn19IiwidGFyZ2V0Ijoie3t0YXJnZXR9fSJ9LCJ2YWx1ZXMiOnsiaHJlZiI6Imh0dHBzOi8vZ2FtZW5pY2hlLmFwcCIsInRhcmdldCI6Il9ibGFuayJ9fQ==">factorim.io</a> Account. Please use the link above to reset your password.</p>\n<p style="font-size: 14px; line-height: 140%;"> </p>\n<p style="font-size: 14px; line-height: 140%;">Note: The link will expire in {{validation_expiration}} minutes, so please verify soon!</p>',
                       _meta: {
                         htmlID: 'u_content_text_4',
                         htmlClassNames: 'u_content_text',
                       },
                       anchor: '',
+                      fontSize: '14px',
                       hideable: true,
                       deletable: true,
                       draggable: true,
@@ -2231,10 +2236,12 @@ table, td { color: #000000; } #u_body a { color: #0000ee; text-decoration: under
                       textAlign: 'left',
                       lineHeight: '140%',
                       selectable: true,
+                      hideDesktop: false,
                       duplicatable: true,
                       containerPadding: '10px',
                       displayCondition: null,
                     },
+                    hasDeprecatedFontControls: true,
                   },
                   {
                     id: 'Zm02V1gPUv',
@@ -2246,6 +2253,7 @@ table, td { color: #000000; } #u_body a { color: #0000ee; text-decoration: under
                         htmlClassNames: 'u_content_text',
                       },
                       anchor: '',
+                      fontSize: '14px',
                       hideable: true,
                       deletable: true,
                       draggable: true,
@@ -2264,6 +2272,7 @@ table, td { color: #000000; } #u_body a { color: #0000ee; text-decoration: under
                       containerPadding: '10px',
                       displayCondition: null,
                     },
+                    hasDeprecatedFontControls: true,
                   },
                   {
                     id: 'IWS8bEdQZn',
@@ -2275,6 +2284,7 @@ table, td { color: #000000; } #u_body a { color: #0000ee; text-decoration: under
                         htmlClassNames: 'u_content_text',
                       },
                       anchor: '',
+                      fontSize: '14px',
                       hideable: true,
                       deletable: true,
                       draggable: true,
@@ -2293,6 +2303,7 @@ table, td { color: #000000; } #u_body a { color: #0000ee; text-decoration: under
                       containerPadding: '10px',
                       displayCondition: null,
                     },
+                    hasDeprecatedFontControls: true,
                   },
                 ],
               },
@@ -2348,6 +2359,8 @@ table, td { color: #000000; } #u_body a { color: #0000ee; text-decoration: under
           popupCloseButton_borderRadius: '0px',
           popupCloseButton_backgroundColor: '#DDDDDD',
         },
+        footers: [],
+        headers: [],
       },
       counters: {
         u_row: 1,
@@ -2355,228 +2368,230 @@ table, td { color: #000000; } #u_body a { color: #0000ee; text-decoration: under
         u_content_text: 4,
         u_content_image: 1,
       },
-      schemaVersion: 11,
+      schemaVersion: 16,
     },
   },
   {
     type: EmailType.RESET_PASSWORD,
-    subject: 'Code de réinitialisation du mot de passe',
+    subject: 'Réinitialisez votre mot de passe',
     lang: Lang.fr,
     html: `<!DOCTYPE HTML PUBLIC "-//W3C//DTD XHTML 1.0 Transitional //EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml" xmlns:v="urn:schemas-microsoft-com:vml" xmlns:o="urn:schemas-microsoft-com:office:office">
-<head>
-<!--[if gte mso 9]>
-<xml>
-  <o:OfficeDocumentSettings>
-    <o:AllowPNG/>
-    <o:PixelsPerInch>96</o:PixelsPerInch>
-  </o:OfficeDocumentSettings>
-</xml>
-<![endif]-->
-  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="x-apple-disable-message-reformatting">
-  <!--[if !mso]><!--><meta http-equiv="X-UA-Compatible" content="IE=edge"><!--<![endif]-->
-  <title></title>
-  
-    <style type="text/css">
-      @media only screen and (min-width: 520px) {
-  .u-row {
-    width: 500px !important;
-  }
-  .u-row .u-col {
-    vertical-align: top;
-  }
-
-  .u-row .u-col-100 {
-    width: 500px !important;
-  }
-
-}
-
-@media (max-width: 520px) {
-  .u-row-container {
-    max-width: 100% !important;
-    padding-left: 0px !important;
-    padding-right: 0px !important;
-  }
-  .u-row .u-col {
-    min-width: 320px !important;
-    max-width: 100% !important;
-    display: block !important;
-  }
-  .u-row {
-    width: 100% !important;
-  }
-  .u-col {
-    width: 100% !important;
-  }
-  .u-col > div {
-    margin: 0 auto;
-  }
-}
-body {
-  margin: 0;
-  padding: 0;
-}
-
-table,
-tr,
-td {
-  vertical-align: top;
-  border-collapse: collapse;
-}
-
-p {
-  margin: 0;
-}
-
-.ie-container table,
-.mso-container table {
-  table-layout: fixed;
-}
-
-* {
-  line-height: inherit;
-}
-
-a[x-apple-data-detectors='true'] {
-  color: inherit !important;
-  text-decoration: none !important;
-}
-
-table, td { color: #000000; } #u_body a { color: #0000ee; text-decoration: underline; }
-    </style>
-  
-  
-
-</head>
-
-<body class="clean-body u_body" style="margin: 0;padding: 0;-webkit-text-size-adjust: 100%;background-color: #e7e7e7;color: #000000">
-  <!--[if IE]><div class="ie-container"><![endif]-->
-  <!--[if mso]><div class="mso-container"><![endif]-->
-  <table id="u_body" style="border-collapse: collapse;table-layout: fixed;border-spacing: 0;mso-table-lspace: 0pt;mso-table-rspace: 0pt;vertical-align: top;min-width: 320px;Margin: 0 auto;background-color: #e7e7e7;width:100%" cellpadding="0" cellspacing="0">
-  <tbody>
-  <tr style="vertical-align: top">
-    <td style="word-break: break-word;border-collapse: collapse !important;vertical-align: top">
-    <!--[if (mso)|(IE)]><table width="100%" cellpadding="0" cellspacing="0" border="0"><tr><td align="center" style="background-color: #e7e7e7;"><![endif]-->
-    
-
-<div class="u-row-container" style="padding: 0px;background-color: transparent">
-  <div class="u-row" style="Margin: 0 auto;min-width: 320px;max-width: 500px;overflow-wrap: break-word;word-wrap: break-word;word-break: break-word;background-color: transparent;">
-    <div style="border-collapse: collapse;display: table;width: 100%;height: 100%;background-color: transparent;">
-      <!--[if (mso)|(IE)]><table width="100%" cellpadding="0" cellspacing="0" border="0"><tr><td style="padding: 0px;background-color: transparent;" align="center"><table cellpadding="0" cellspacing="0" border="0" style="width:500px;"><tr style="background-color: transparent;"><![endif]-->
+    <html xmlns="http://www.w3.org/1999/xhtml" xmlns:v="urn:schemas-microsoft-com:vml" xmlns:o="urn:schemas-microsoft-com:office:office">
+    <head>
+    <!--[if gte mso 9]>
+    <xml>
+      <o:OfficeDocumentSettings>
+        <o:AllowPNG/>
+        <o:PixelsPerInch>96</o:PixelsPerInch>
+      </o:OfficeDocumentSettings>
+    </xml>
+    <![endif]-->
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="x-apple-disable-message-reformatting">
+      <!--[if !mso]><!--><meta http-equiv="X-UA-Compatible" content="IE=edge"><!--<![endif]-->
+      <title></title>
       
-<!--[if (mso)|(IE)]><td align="center" width="500" style="width: 500px;padding: 0px;border-top: 0px solid transparent;border-left: 0px solid transparent;border-right: 0px solid transparent;border-bottom: 0px solid transparent;" valign="top"><![endif]-->
-<div class="u-col u-col-100" style="max-width: 320px;min-width: 500px;display: table-cell;vertical-align: top;">
-  <div style="height: 100%;width: 100% !important;">
-  <!--[if (!mso)&(!IE)]><!--><div style="height: 100%; padding: 0px;border-top: 0px solid transparent;border-left: 0px solid transparent;border-right: 0px solid transparent;border-bottom: 0px solid transparent;"><!--<![endif]-->
-  
-<table style="font-family:arial,helvetica,sans-serif;" role="presentation" cellpadding="0" cellspacing="0" width="100%" border="0">
-  <tbody>
-    <tr>
-      <td style="overflow-wrap:break-word;word-break:break-word;padding:10px 10px 40px;font-family:arial,helvetica,sans-serif;" align="left">
+        <style type="text/css">
+          @media only screen and (min-width: 520px) {
+      .u-row {
+        width: 500px !important;
+      }
+      .u-row .u-col {
+        vertical-align: top;
+      }
+    
+      .u-row .u-col-100 {
+        width: 500px !important;
+      }
+    
+    }
+    
+    @media (max-width: 520px) {
+      .u-row-container {
+        max-width: 100% !important;
+        padding-left: 0px !important;
+        padding-right: 0px !important;
+      }
+      .u-row .u-col {
+        min-width: 320px !important;
+        max-width: 100% !important;
+        display: block !important;
+      }
+      .u-row {
+        width: 100% !important;
+      }
+      .u-col {
+        width: 100% !important;
+      }
+      .u-col > div {
+        margin: 0 auto;
+      }
+    }
+    body {
+      margin: 0;
+      padding: 0;
+    }
+    
+    table,
+    tr,
+    td {
+      vertical-align: top;
+      border-collapse: collapse;
+    }
+    
+    p {
+      margin: 0;
+    }
+    
+    .ie-container table,
+    .mso-container table {
+      table-layout: fixed;
+    }
+    
+    * {
+      line-height: inherit;
+    }
+    
+    a[x-apple-data-detectors='true'] {
+      color: inherit !important;
+      text-decoration: none !important;
+    }
+    
+    table, td { color: #000000; } #u_body a { color: #0000ee; text-decoration: underline; }
+        </style>
+      
+      
+    
+    </head>
+    
+    <body class="clean-body u_body" style="margin: 0;padding: 0;-webkit-text-size-adjust: 100%;background-color: #e7e7e7;color: #000000">
+      <!--[if IE]><div class="ie-container"><![endif]-->
+      <!--[if mso]><div class="mso-container"><![endif]-->
+      <table id="u_body" style="border-collapse: collapse;table-layout: fixed;border-spacing: 0;mso-table-lspace: 0pt;mso-table-rspace: 0pt;vertical-align: top;min-width: 320px;Margin: 0 auto;background-color: #e7e7e7;width:100%" cellpadding="0" cellspacing="0">
+      <tbody>
+      <tr style="vertical-align: top">
+        <td style="word-break: break-word;border-collapse: collapse !important;vertical-align: top">
+        <!--[if (mso)|(IE)]><table width="100%" cellpadding="0" cellspacing="0" border="0"><tr><td align="center" style="background-color: #e7e7e7;"><![endif]-->
         
-<table width="100%" cellpadding="0" cellspacing="0" border="0">
-  <tr>
-    <td style="padding-right: 0px;padding-left: 0px;" align="center">
-      <a href="https://factorim.io" target="_blank">
-      <img align="center" border="0" src="https://factorim.io/images/logos/factorim-logo.png" alt="" title="" style="outline: none;text-decoration: none;-ms-interpolation-mode: bicubic;clear: both;display: inline-block !important;border: none;height: auto;float: none;width: 100%;max-width: 238px;" width="238"/>
-      </a>
-    </td>
-  </tr>
-</table>
-
-      </td>
-    </tr>
-  </tbody>
-</table>
-
-<table style="font-family:arial,helvetica,sans-serif;" role="presentation" cellpadding="0" cellspacing="0" width="100%" border="0">
-  <tbody>
-    <tr>
-      <td style="overflow-wrap:break-word;word-break:break-word;padding:10px;font-family:arial,helvetica,sans-serif;" align="left">
-        
-  <div style="line-height: 140%; text-align: left; word-wrap: break-word;">
-    <p style="font-size: 14px; line-height: 140%;"><strong><span style="font-size: 20px; line-height: 28px;">Voici votre code de sécurité :</span></strong></p>
-<p style="font-size: 14px; line-height: 140%;">{{validation_code}}</p>
-  </div>
-
-      </td>
-    </tr>
-  </tbody>
-</table>
-
-<table style="font-family:arial,helvetica,sans-serif;" role="presentation" cellpadding="0" cellspacing="0" width="100%" border="0">
-  <tbody>
-    <tr>
-      <td style="overflow-wrap:break-word;word-break:break-word;padding:10px;font-family:arial,helvetica,sans-serif;" align="left">
-        
-  <div style="line-height: 140%; text-align: left; word-wrap: break-word;">
-    <p style="font-size: 14px; line-height: 140%;">Bonjour,</p>
-<p style="font-size: 14px; line-height: 140%;"> </p>
-<p style="font-size: 14px; line-height: 140%;">Nous avons reçu une demande de sécurité de votre compte <a rel="noopener" href="https://factorim.io" target="_blank">factorim.io</a>. Veuillez utiliser le code ci-dessus pour réinitialiser votre mot de passe.</p>
-<p style="font-size: 14px; line-height: 140%;"> </p>
-<p style="font-size: 14px; line-height: 140%;">Remarque : Le code expirera dans 15 minutes, veuillez donc le vérifier rapidement !</p>
-  </div>
-
-      </td>
-    </tr>
-  </tbody>
-</table>
-
-<table style="font-family:arial,helvetica,sans-serif;" role="presentation" cellpadding="0" cellspacing="0" width="100%" border="0">
-  <tbody>
-    <tr>
-      <td style="overflow-wrap:break-word;word-break:break-word;padding:10px;font-family:arial,helvetica,sans-serif;" align="left">
-        
-  <div style="line-height: 140%; text-align: left; word-wrap: break-word;">
-    <p style="font-size: 14px; line-height: 140%;">Merci,</p>
-<p style="font-size: 14px; line-height: 140%;"> </p>
-<p style="font-size: 14px; line-height: 140%;">L'équipe de Factorim</p>
-  </div>
-
-      </td>
-    </tr>
-  </tbody>
-</table>
-
-<table style="font-family:arial,helvetica,sans-serif;" role="presentation" cellpadding="0" cellspacing="0" width="100%" border="0">
-  <tbody>
-    <tr>
-      <td style="overflow-wrap:break-word;word-break:break-word;padding:10px;font-family:arial,helvetica,sans-serif;" align="left">
-        
-  <div style="line-height: 140%; text-align: left; word-wrap: break-word;">
-    <p style="font-size: 14px; line-height: 140%; text-align: center;"><strong>Des problèmes ou des questions ?</strong></p>
-<p style="font-size: 14px; line-height: 140%; text-align: center;"><a rel="noopener" href="https://discord.gg/Tv3KVHfQMf" target="_blank">https://discord.gg/Tv3KVHfQMf</a></p>
-  </div>
-
-      </td>
-    </tr>
-  </tbody>
-</table>
-
-  <!--[if (!mso)&(!IE)]><!--></div><!--<![endif]-->
-  </div>
-</div>
-<!--[if (mso)|(IE)]></td><![endif]-->
-      <!--[if (mso)|(IE)]></tr></table></td></tr></table><![endif]-->
+      
+      
+    <div class="u-row-container" style="padding: 0px;background-color: transparent">
+      <div class="u-row" style="margin: 0 auto;min-width: 320px;max-width: 500px;overflow-wrap: break-word;word-wrap: break-word;word-break: break-word;background-color: transparent;">
+        <div style="border-collapse: collapse;display: table;width: 100%;height: 100%;background-color: transparent;">
+          <!--[if (mso)|(IE)]><table width="100%" cellpadding="0" cellspacing="0" border="0"><tr><td style="padding: 0px;background-color: transparent;" align="center"><table cellpadding="0" cellspacing="0" border="0" style="width:500px;"><tr style="background-color: transparent;"><![endif]-->
+          
+    <!--[if (mso)|(IE)]><td align="center" width="500" style="width: 500px;padding: 0px;border-top: 0px solid transparent;border-left: 0px solid transparent;border-right: 0px solid transparent;border-bottom: 0px solid transparent;" valign="top"><![endif]-->
+    <div class="u-col u-col-100" style="max-width: 320px;min-width: 500px;display: table-cell;vertical-align: top;">
+      <div style="height: 100%;width: 100% !important;">
+      <!--[if (!mso)&(!IE)]><!--><div style="box-sizing: border-box; height: 100%; padding: 0px;border-top: 0px solid transparent;border-left: 0px solid transparent;border-right: 0px solid transparent;border-bottom: 0px solid transparent;"><!--<![endif]-->
+      
+    <table style="font-family:arial,helvetica,sans-serif;" role="presentation" cellpadding="0" cellspacing="0" width="100%" border="0">
+      <tbody>
+        <tr>
+          <td style="overflow-wrap:break-word;word-break:break-word;padding:10px 10px 40px;font-family:arial,helvetica,sans-serif;" align="left">
+            
+    <table width="100%" cellpadding="0" cellspacing="0" border="0">
+      <tr>
+        <td style="padding-right: 0px;padding-left: 0px;" align="center">
+          <a href="https://factorim.io" target="_blank">
+          <img align="center" border="0" src="https://factorim.io/images/logos/factorim-logo.png" alt="" title="" style="outline: none;text-decoration: none;-ms-interpolation-mode: bicubic;clear: both;display: inline-block !important;border: none;height: auto;float: none;width: 100%;max-width: 238px;" width="238"/>
+          </a>
+        </td>
+      </tr>
+    </table>
+    
+          </td>
+        </tr>
+      </tbody>
+    </table>
+    
+    <table style="font-family:arial,helvetica,sans-serif;" role="presentation" cellpadding="0" cellspacing="0" width="100%" border="0">
+      <tbody>
+        <tr>
+          <td style="overflow-wrap:break-word;word-break:break-word;padding:10px;font-family:arial,helvetica,sans-serif;" align="left">
+            
+      <div style="font-size: 14px; line-height: 140%; text-align: left; word-wrap: break-word;">
+        <p style="font-size: 14px; line-height: 140%;"><strong><span style="font-size: 20px; line-height: 28px;">Voici votre lien de sécurité :</span></strong></p>
+    <p style="font-size: 14px; line-height: 140%;">{{validation_link}}</p>
+      </div>
+    
+          </td>
+        </tr>
+      </tbody>
+    </table>
+    
+    <table style="font-family:arial,helvetica,sans-serif;" role="presentation" cellpadding="0" cellspacing="0" width="100%" border="0">
+      <tbody>
+        <tr>
+          <td style="overflow-wrap:break-word;word-break:break-word;padding:10px;font-family:arial,helvetica,sans-serif;" align="left">
+            
+      <div style="font-size: 14px; line-height: 140%; text-align: left; word-wrap: break-word;">
+        <p style="font-size: 14px; line-height: 140%;">Bonjour,</p>
+    <p style="font-size: 14px; line-height: 140%;"> </p>
+    <p style="font-size: 14px; line-height: 140%;">Nous avons reçu une demande de sécurité de votre compte <a rel="noopener" href="https://factorim.io" target="_blank">factorim.io</a>. Veuillez utiliser le lien ci-dessus pour réinitialiser votre mot de passe.</p>
+    <p style="font-size: 14px; line-height: 140%;"> </p>
+    <p style="font-size: 14px; line-height: 140%;">Remarque : Le lien expirera dans {{validation_expiration}} minutes, veuillez donc le vérifier rapidement !</p>
+      </div>
+    
+          </td>
+        </tr>
+      </tbody>
+    </table>
+    
+    <table style="font-family:arial,helvetica,sans-serif;" role="presentation" cellpadding="0" cellspacing="0" width="100%" border="0">
+      <tbody>
+        <tr>
+          <td style="overflow-wrap:break-word;word-break:break-word;padding:10px;font-family:arial,helvetica,sans-serif;" align="left">
+            
+      <div style="font-size: 14px; line-height: 140%; text-align: left; word-wrap: break-word;">
+        <p style="font-size: 14px; line-height: 140%;">Merci,</p>
+    <p style="font-size: 14px; line-height: 140%;"> </p>
+    <p style="font-size: 14px; line-height: 140%;">L'équipe de Factorim</p>
+      </div>
+    
+          </td>
+        </tr>
+      </tbody>
+    </table>
+    
+    <table style="font-family:arial,helvetica,sans-serif;" role="presentation" cellpadding="0" cellspacing="0" width="100%" border="0">
+      <tbody>
+        <tr>
+          <td style="overflow-wrap:break-word;word-break:break-word;padding:10px;font-family:arial,helvetica,sans-serif;" align="left">
+            
+      <div style="font-size: 14px; line-height: 140%; text-align: left; word-wrap: break-word;">
+        <p style="font-size: 14px; line-height: 140%; text-align: center;"><strong>Des problèmes ou des questions ?</strong></p>
+    <p style="font-size: 14px; line-height: 140%; text-align: center;"><a rel="noopener" href="https://discord.gg/Tv3KVHfQMf" target="_blank">https://discord.gg/Tv3KVHfQMf</a></p>
+      </div>
+    
+          </td>
+        </tr>
+      </tbody>
+    </table>
+    
+      <!--[if (!mso)&(!IE)]><!--></div><!--<![endif]-->
+      </div>
     </div>
-  </div>
-</div>
-
-
-    <!--[if (mso)|(IE)]></td></tr></table><![endif]-->
-    </td>
-  </tr>
-  </tbody>
-  </table>
-  <!--[if mso]></div><![endif]-->
-  <!--[if IE]></div><![endif]-->
-</body>
-
-</html>
-`,
+    <!--[if (mso)|(IE)]></td><![endif]-->
+          <!--[if (mso)|(IE)]></tr></table></td></tr></table><![endif]-->
+        </div>
+      </div>
+      </div>
+      
+    
+    
+        <!--[if (mso)|(IE)]></td></tr></table><![endif]-->
+        </td>
+      </tr>
+      </tbody>
+      </table>
+      <!--[if mso]></div><![endif]-->
+      <!--[if IE]></div><![endif]-->
+    </body>
+    
+    </html>
+    `,
     design: {
       body: {
         id: 'Q7M_xrxQeG',
@@ -2654,12 +2669,13 @@ table, td { color: #000000; } #u_body a { color: #0000ee; text-decoration: under
                     id: '5sqvqyJNzU',
                     type: 'text',
                     values: {
-                      text: '<p style="font-size: 14px; line-height: 140%;"><strong><span style="font-size: 20px; line-height: 28px;">Voici votre code de sécurité :</span></strong></p>\n<p style="font-size: 14px; line-height: 140%;">{{validation_code}}</p>',
+                      text: '<p style="font-size: 14px; line-height: 140%;"><strong><span style="font-size: 20px; line-height: 28px;">Voici votre lien de sécurité :</span></strong></p>\n<p style="font-size: 14px; line-height: 140%;">{{validation_link}}</p>',
                       _meta: {
                         htmlID: 'u_content_text_1',
                         htmlClassNames: 'u_content_text',
                       },
                       anchor: '',
+                      fontSize: '14px',
                       hideable: true,
                       deletable: true,
                       draggable: true,
@@ -2678,17 +2694,19 @@ table, td { color: #000000; } #u_body a { color: #0000ee; text-decoration: under
                       containerPadding: '10px',
                       displayCondition: null,
                     },
+                    hasDeprecatedFontControls: true,
                   },
                   {
                     id: 'FXYj3iiTN3',
                     type: 'text',
                     values: {
-                      text: '<p style="font-size: 14px; line-height: 140%;">Bonjour,</p>\n<p style="font-size: 14px; line-height: 140%;"> </p>\n<p style="font-size: 14px; line-height: 140%;">Nous avons reçu une demande de sécurité de votre compte <a rel="noopener" href="https://factorim.io" target="_blank" data-u-link-value="eyJuYW1lIjoid2ViIiwiYXR0cnMiOnsiaHJlZiI6Int7aHJlZn19IiwidGFyZ2V0Ijoie3t0YXJnZXR9fSJ9LCJ2YWx1ZXMiOnsiaHJlZiI6Imh0dHBzOi8vZ2FtZW5pY2hlLmFwcCIsInRhcmdldCI6Il9ibGFuayJ9fQ==">factorim.io</a>. Veuillez utiliser le code ci-dessus pour réinitialiser votre mot de passe.</p>\n<p style="font-size: 14px; line-height: 140%;"> </p>\n<p style="font-size: 14px; line-height: 140%;">Remarque : Le code expirera dans 15 minutes, veuillez donc le vérifier rapidement !</p>',
+                      text: '<p style="font-size: 14px; line-height: 140%;">Bonjour,</p>\n<p style="font-size: 14px; line-height: 140%;"> </p>\n<p style="font-size: 14px; line-height: 140%;">Nous avons reçu une demande de sécurité de votre compte <a rel="noopener" href="https://factorim.io" target="_blank" data-u-link-value="eyJuYW1lIjoid2ViIiwiYXR0cnMiOnsiaHJlZiI6Int7aHJlZn19IiwidGFyZ2V0Ijoie3t0YXJnZXR9fSJ9LCJ2YWx1ZXMiOnsiaHJlZiI6Imh0dHBzOi8vZ2FtZW5pY2hlLmFwcCIsInRhcmdldCI6Il9ibGFuayJ9fQ==">factorim.io</a>. Veuillez utiliser le lien ci-dessus pour réinitialiser votre mot de passe.</p>\n<p style="font-size: 14px; line-height: 140%;"> </p>\n<p style="font-size: 14px; line-height: 140%;">Remarque : Le lien expirera dans {{validation_expiration}} minutes, veuillez donc le vérifier rapidement !</p>',
                       _meta: {
                         htmlID: 'u_content_text_4',
                         htmlClassNames: 'u_content_text',
                       },
                       anchor: '',
+                      fontSize: '14px',
                       hideable: true,
                       deletable: true,
                       draggable: true,
@@ -2707,6 +2725,7 @@ table, td { color: #000000; } #u_body a { color: #0000ee; text-decoration: under
                       containerPadding: '10px',
                       displayCondition: null,
                     },
+                    hasDeprecatedFontControls: true,
                   },
                   {
                     id: '8wAGX-LivC',
@@ -2718,6 +2737,7 @@ table, td { color: #000000; } #u_body a { color: #0000ee; text-decoration: under
                         htmlClassNames: 'u_content_text',
                       },
                       anchor: '',
+                      fontSize: '14px',
                       hideable: true,
                       deletable: true,
                       draggable: true,
@@ -2736,6 +2756,7 @@ table, td { color: #000000; } #u_body a { color: #0000ee; text-decoration: under
                       containerPadding: '10px',
                       displayCondition: null,
                     },
+                    hasDeprecatedFontControls: true,
                   },
                   {
                     id: 'Lz6o18S5ea',
@@ -2747,6 +2768,7 @@ table, td { color: #000000; } #u_body a { color: #0000ee; text-decoration: under
                         htmlClassNames: 'u_content_text',
                       },
                       anchor: '',
+                      fontSize: '14px',
                       hideable: true,
                       deletable: true,
                       draggable: true,
@@ -2765,6 +2787,7 @@ table, td { color: #000000; } #u_body a { color: #0000ee; text-decoration: under
                       containerPadding: '10px',
                       displayCondition: null,
                     },
+                    hasDeprecatedFontControls: true,
                   },
                 ],
               },
@@ -2820,6 +2843,8 @@ table, td { color: #000000; } #u_body a { color: #0000ee; text-decoration: under
           popupCloseButton_borderRadius: '0px',
           popupCloseButton_backgroundColor: '#DDDDDD',
         },
+        footers: [],
+        headers: [],
       },
       counters: {
         u_row: 1,
@@ -2827,7 +2852,7 @@ table, td { color: #000000; } #u_body a { color: #0000ee; text-decoration: under
         u_content_text: 4,
         u_content_image: 1,
       },
-      schemaVersion: 11,
+      schemaVersion: 16,
     },
   },
   {

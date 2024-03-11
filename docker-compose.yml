@@ -4,7 +4,8 @@ services:
   factorim-api-demo:
     container_name: factorim-api-demo
     image: ghcr.io/factorim/factorim-api-demo:latest
-    command: ["./scripts/wait-for-it.sh", "factorim-postgres:5432", "--", "/docker-entrypoint.sh"]
+    depends_on:
+      - factorim-postgres-demo
     ports:
       - 4000:4000
     env_file:

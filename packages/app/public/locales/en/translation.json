@@ -1,0 +1,187 @@
+{
+  "common": {
+    "action": {
+      "areYouSure": "Are you sure?",
+      "cancel": "Cancel",
+      "change": "Change",
+      "clearFilters": "Clear filters",
+      "close": "Close",
+      "edit": "Edit",
+      "no": "No",
+      "submit": "Submit",
+      "view": "View",
+      "yes": "Yes"
+    },
+    "label": {
+      "actions": "actions",
+      "all": "All",
+      "changeLanguage": "Change the language",
+      "changeTheme": "Change the theme",
+      "createdAt": "created at",
+      "disabled": "Disabled",
+      "email": "Email",
+      "enabled": "Enabled",
+      "index": "Index",
+      "lang": "Lang",
+      "name": "name",
+      "no": "No",
+      "status": "Status",
+      "theme": "Theme",
+      "total": "total",
+      "type": "Type",
+      "updatedAt": "Updated At",
+      "url": "Url",
+      "yes": "Yes"
+    },
+    "message": {
+      "addType": "Add a type",
+      "loading": "Loading",
+      "updated": "Updated!"
+    },
+    "error": {
+      "somethingWentWrong": "Sorry, something went wrong."
+    }
+  },
+  "lang": {
+    "en": "English",
+    "fr": "French"
+  },
+  "navigation": {
+    "admin": "Admin",
+    "dashboard": "Dashboard",
+    "emailTemplate": "Email Template",
+    "emailTemplates": "Email Templates",
+    "emailValidations": "Email Validations",
+    "home": "Home",
+    "posts": "Posts",
+    "resetPassword": "Reset password",
+    "users": "Users"
+  },
+  "pagination": {
+    "action": {
+      "next": "Next",
+      "previous": "Previous"
+    },
+    "label": {
+      "of": "of",
+      "perPage": "per page",
+      "results": "results"
+    }
+  },
+  "user": {
+    "action": {
+      "deleteUser": "Delete User",
+      "googleSignIn": "Google Sign in",
+      "googleSignUp": "Google Sign up",
+      "forgotPassword": "Forgot Password?",
+      "logout": "Logout",
+      "profile": "Profile",
+      "sendResetEmail": "Send reset email",
+      "signIn": "Sign In",
+      "signUp": "Sign Up"
+    },
+    "label": {
+      "active": "Active",
+      "addNewPassword": "Add a new password",
+      "addYourCurrentPassword": "Add your current password",
+      "admin": "Admin",
+      "changeEmail": "Change Email",
+      "changePassword": "Change password",
+      "currentPassword": "Current password",
+      "deleteAccount": "Delete the account",
+      "deleteProfile": "Delete Profile",
+      "deleteYourAccount": "Delete your account",
+      "email": "Email",
+      "enterYourNewEmail": "Votre nouvel email",
+      "fair": "fair",
+      "forgotPassword": "Forgot password?",
+      "good": "good",
+      "inactive": "Inactive",
+      "name": "Name",
+      "noUsersFound": "No users found.",
+      "needAccount": "Need an account?",
+      "newPassword": "New password",
+      "password": "Password",
+      "passwordStrength": "Password strength",
+      "pending": "Pending",
+      "or": "or",
+      "resetPassword": "Reset Password",
+      "roles": "Roles",
+      "searchUser": "Search a user",
+      "signUp": "Sign Up",
+      "strong": "strong",
+      "suspended": "Suspended",
+      "updateCurrentPassword": "Update current password",
+      "user": "User",
+      "weak": "weak",
+      "yourEmail": "Your email",
+      "yourNewEmail": "Your new email"
+    },
+    "message": {
+      "accountSuccessfullyDeleted": "Account successfully deleted",
+      "accountSuccessfullyCreated": "Account successfully created",
+      "addAnEmail": "Add an email",
+      "addCode": "Add a code",
+      "addName": "Add a name",
+      "addPassword": "Add a password",
+      "alreadyHaveAccount": "Already have an account?",
+      "enterAccountEmailToResetPassword": "Enter your account's email address and we will send you a password reset link.",
+      "enterCodeToConfirmDeleteAccount": "Entrez le code que vous avez reçu par e-mail pour confirmer la suppression de votre compte.",
+      "enteredValueDoesNotNatchEmailFormat": "Entered value does not match email format",
+      "pleaseCheckYourMailboxForTheCode": "Please check your mailbox for the code and enter it here.",
+      "yourPasswordHasBeenChanged.": "Your password has been changed."
+    },
+    "error": {
+      "passwordTooWeak": "Password too weak"
+    }
+  },
+  "email": {
+    "action": {
+      "newEmailTemplate": "New Email Template",
+      "deleteEmailTemplate": "Delete Email Template"
+    },
+    "label": {
+      "body": "Body",
+      "claimed": "Claimed",
+      "code": "Code",
+      "checked": "Checked",
+      "emailTemplateSubject": "Email Template Subject",
+      "emailValidation": "Email Validation",
+      "searchEmailValidation": "Search an email validation",
+      "subject": "Subject",
+      "token": "Token",
+      "updateEmailTemplate": "Update Email Template"
+    },
+    "message": {
+      "addCode": "Add a code",
+      "addSubject": "Add a subject",
+      "noEmailTemplateFound": "No email templates found.",
+      "noEmailValidationsFound": "No email validations found."
+    }
+  },
+  "post": {
+    "label": {
+      "author": "Author",
+      "content": "Content",
+      "deletePost": "Delete Post",
+      "newPost": "New Post",
+      "searchPost": "Search a post",
+      "title": "Title"
+    },
+    "message": {
+      "addContent": "Add a content",
+      "addTitle": "Add a title",
+      "noPostsFound": "No posts found."
+    }
+  },
+  "info": {
+    "home": {
+      "title": "Factorim NestJS Next.js Boilerplate",
+      "content": "Discover an integration of Next.js and NestJS, featuring GraphQL and advanced authentication, designed for rapid and scalable application development.",
+      "getStarted": "Get started"
+    },
+    "footer": {
+      "allRightReserved": "All right reserved"
+    }
+  }
+}

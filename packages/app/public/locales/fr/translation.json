@@ -1,0 +1,187 @@
+{
+  "common": {
+    "action": {
+      "areYouSure": "Êtes-vous sûr ?",
+      "cancel": "Annuler",
+      "change": "Changer",
+      "clearFilters": "Effacer les filtres",
+      "close": "Fermer",
+      "edit": "Editer",
+      "no": "Non",
+      "submit": "Valider",
+      "view": "Voir",
+      "yes": "Oui"
+    },
+    "label": {
+      "actions": "actions",
+      "all": "Tous",
+      "changeLanguage": "Changer la langue",
+      "changeTheme": "Change le thème",
+      "createdAt": "créé à",
+      "disabled": "Désactivé",
+      "email": "Email",
+      "enabled": "Activé",
+      "index": "Index",
+      "lang": "Langue",
+      "name": "nom",
+      "no": "Non",
+      "status": "Statut",
+      "theme": "Theme",
+      "total": "total",
+      "type": "Type",
+      "updatedAt": "mis à jour à",
+      "url": "Url",
+      "yes": "Oui"
+    },
+    "message": {
+      "addType": "Ajoutez un type",
+      "loading": "Chargement",
+      "updated": "Mis à jour!"
+    },
+    "error": {
+      "somethingWentWrong": "Désolé, quelque chose s'est mal passé."
+    }
+  },
+  "lang": {
+    "en": "Anglais",
+    "fr": "Français"
+  },
+  "navigation": {
+    "admin": "Admin",
+    "dashboard": "Tableau de bord",
+    "emaiTemplates": "Templates Email",
+    "emaiTemplate": "Template Email",
+    "emailValidations": "Email Validations",
+    "home": "Accueil",
+    "posts": "Articles",
+    "resetPassword": "Réinitialiser le mot de passe",
+    "users": "Utilisateurs"
+  },
+  "pagination": {
+    "action": {
+      "next": "Suivant",
+      "previous": "Précédent"
+    },
+    "label": {
+      "of": "sur",
+      "perPage": "par page",
+      "results": "résultats"
+    }
+  },
+  "user": {
+    "action": {
+      "deleteUser": "Supprimer l'utilisateur",
+      "googleSignIn": "Connexion avec Google",
+      "googleSignUp": "S'inscrire avec Google",
+      "forgotPassword": "Mot de passe oublié?",
+      "logout": "Se déconnecter",
+      "profile": "Profil",
+      "sendResetEmail": "Envoyer un e-mail de réinitialisation",
+      "signIn": "Se connecter",
+      "signUp": "S'inscrire"
+    },
+    "label": {
+      "active": "Actif",
+      "addNewPassword": "Ajouter un nouveau mot de passe",
+      "addYourCurrentPassword": "Ajouter votre mot de passe actuel",
+      "admin": "Admin",
+      "changeEmail": "Changer l'e-mail",
+      "changePassword": "Changer le mot de passe",
+      "currentPassword": "Mot de passe actuel",
+      "deleteAccount": "Supprimer le compte",
+      "deleteProfile": "Supprimer le profil",
+      "deleteYourAccount": "Supprimer votre compte",
+      "email": "Email",
+      "enterYourNewEmail": "Votre nouvel email",
+      "fair": "passable",
+      "forgotPassword": "Mot de passe oublié ?",
+      "good": "bon",
+      "inactive": "Inactif",
+      "name": "Nom",
+      "noUsersFound": "Aucun utilisateur trouvé.",
+      "needAccount": "Besoin d'un compte?",
+      "newPassword": "Nouveau mot de passe",
+      "password": "Mot de passe",
+      "passwordStrength": "Fiabilité du mot de passe",
+      "pending": "En attente",
+      "or": "ou",
+      "resetPassword": "Réinitialiser le mot de passe",
+      "roles": "Rôles",
+      "searchUser": "Rechercher un utilisateur",
+      "signUp": "S'inscrire",
+      "strong": "fort",
+      "suspended": "Suspendu",
+      "updateCurrentPassword": "Modifier le mot de passe",
+      "user": "Utilisateur",
+      "weak": "faible",
+      "yourEmail": "Votre email",
+      "yourNewEmail": "Votre nouvel email"
+    },
+    "message": {
+      "accountSuccessfullyDeleted": "Compte supprimé avec succès",
+      "accountSuccessfullyCreated": "Compte créé avec succès",
+      "addAnEmail": "Ajouter un email",
+      "addCode": "Ajouter un code",
+      "addName": "Ajouter un nom",
+      "addPassword": "Ajouter un mot de passe",
+      "alreadyHaveAccount": "Vous avez déjà un compte ?",
+      "enterAccountEmailToResetPassword": "Entrez l'adresse e-mail de votre compte et nous vous enverrons un lien de réinitialisation du mot de passe.",
+      "enterCodeToConfirmDeleteAccount": "Saisissez le code que vous avez reçu par email pour confirmer la suppression de votre compte.",
+      "enteredValueDoesNotNatchEmailFormat": "La valeur saisie ne correspond pas au format de l'email",
+      "pleaseCheckYourMailboxForTheCode": "Veuillez vérifier votre boîte mail pour le code et entrez-le ici.",
+      "yourPasswordHasBeenChanged.": "Votre mot de passe a été changé."
+    },
+    "error": {
+      "passwordTooWeak": "Mot de passe trop faible"
+    }
+  },
+  "email": {
+    "action": {
+      "newEmailTemplate": "Nouveau Template Email ",
+      "deleteEmailTemplate": "Effacer Template Email"
+    },
+    "label": {
+      "body": "Body",
+      "claimed": "Revendiqué",
+      "code": "Code",
+      "checked": "Vérifié",
+      "emailTemplateSubject": "Objet du Template Email",
+      "emailValidation": "Email Validation",
+      "searchEmailValidation": "Rechercher un email de validation",
+      "subject": "Objet",
+      "token": "Token",
+      "updateEmailTemplate": "Mettre à jour le Template Email"
+    },
+    "message": {
+      "addCode": "Ajouter un code",
+      "addSubject": "Ajouter un sujet",
+      "noEmailTemplateFound": "Aucun Template Email trouvé.",
+      "noEmailValidationsFound": "Aucune validation d'e-mail trouvée."
+    }
+  },
+  "post": {
+    "label": {
+      "author": "Auteur",
+      "content": "Contenu",
+      "deletePost": "Effacer article",
+      "newPost": "Nouvel article",
+      "searchPost": "Rechercher un article",
+      "title": "Titre"
+    },
+    "message": {
+      "addContent": "Ajouter un contenu",
+      "addTitle": "Ajouter un titre",
+      "noPostsFound": "Aucun article trouvé."
+    }
+  },
+  "info": {
+    "home": {
+      "title": "Factorim NestJS Next.js Boilerplate",
+      "content": "Découvrez une intégration de Next.js et NestJS, dotée de GraphQL et d'une authentification avancée, conçue pour un développement d'applications rapide et évolutif.",
+      "getStarted": "Commencer"
+    },
+    "footer": {
+      "allRightReserved": "Tous droits réservés"
+    }
+  }
+}

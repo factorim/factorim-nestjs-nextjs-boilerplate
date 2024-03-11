@@ -1,0 +1,25 @@
+version: '3.7'
+
+services:
+  factorim-app:
+    container_name: factorim-app
+    build:
+      context: .
+    ports:
+      - ${PORT}:${PORT}
+    volumes:
+      - .:/usr/src/app
+      - /usr/src/app/node_modules
+    env_file:
+      - .env
+    environment:
+      - NEXT_PUBLIC_SOCIAL_GITHUB_URL=http://froucfourc-api:4000/graphql
+      - API_INTERNAL_GRAPHQL_URL=http://lavzubere-api:4000/graphql
+      - API_INTERNAL_GRAPHQL_WS_URL=ws://lav444566666-api:4000/graphql
+    restart: unless-stopped
+    networks:
+      - factorim-network
+
+networks:
+  factorim-network:
+    external: true

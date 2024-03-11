@@ -1,0 +1,6 @@
+# Env
+.env
+
+# Upload
+backup/*
+!backup/.keep 

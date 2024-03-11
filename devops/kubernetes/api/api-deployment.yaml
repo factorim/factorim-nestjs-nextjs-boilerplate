@@ -1,0 +1,50 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: factorim-api-deployment
+  labels:
+    app: factorim-api
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: factorim-api
+  template:
+    metadata:
+      labels:
+        app: factorim-api
+    spec:
+      containers:
+        - name: factorim-api
+          image: ghcr.io/factorim/factorim-nestjs-nextjs-boilerplate/factorim-api:1.0.0
+          ports:
+            - containerPort: 3000
+          env:
+            - name: NODE_ENV
+              value: production
+            - name: PORT
+              value: "3000"
+            - name: DATABASE_URL
+              value: postgresql://factorim:JustChangeMe@factorim-postgres-service:5432/factorimdb?schema=factorim&sslmode=prefer
+            - name: API_KEY
+              value: JustChangeMe
+            - name: REDIS_URL
+              value: redis://:JustChangeMe@factorim-redis-service:6379
+            - name: RABBITMQ_URL
+              value: amqp://factorim:JustChangeMe@factorim-rabbitmq-service:5672
+            - name: JWT_EXPIRES_IN
+              value: 1h
+            - name: JWT_REFRESH_IN
+              value: 15d
+            - name: JWT_ACCESS_SECRET
+              value: JustChangeMe
+            - name: JWT_REFRESH_SECRET
+              value: JustChangeMe
+            - name: EMAIL_SENDGRID_API_KEY
+              value: JustChangeMe
+            - name: EMAIL_CONTACT
+              value: contact@factorim.io
+            - name: EMAIL_NO_REPLY
+              value: no-reply@factorim.io
+      imagePullSecrets:
+        - name: regcred

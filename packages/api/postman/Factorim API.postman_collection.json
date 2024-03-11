@@ -1,0 +1,1566 @@
+{
+	"info": {
+		"_postman_id": "90183e78-9ca5-424e-bc4d-e1ad52c5273c",
+		"name": "Factorim API",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "5710528",
+		"_collection_link": "https://speeding-sunset-5819.postman.co/workspace/Factorim~07338807-a33d-4105-a5ba-cd8e91e7b7fb/collection/5710528-90183e78-9ca5-424e-bc4d-e1ad52c5273c?action=share&source=collection_link&creator=5710528"
+	},
+	"item": [
+		{
+			"name": "Auth",
+			"item": [
+				{
+					"name": "Google",
+					"item": [
+						{
+							"name": "Sign In with Google",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"// Set the new accessToken\r",
+											"pm.sendRequest(\"https://postman-echo.com/get\", function (err, response) {\r",
+											"    console.log(response.json());\r",
+											"});\r",
+											"var jsonData = JSON.parse(responseBody);\r",
+											"pm.collectionVariables.set(\"paranode_jwt\", jsonData.data.signin.accessToken);\r",
+											"pm.collectionVariables.set(\"paranode_refresh_token\", jsonData.data.signin.refreshToken);"
+										],
+										"type": "text/javascript"
+									}
+								},
+								{
+									"listen": "prerequest",
+									"script": {
+										"exec": [
+											""
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "graphql",
+									"graphql": {
+										"query": "mutation signinGoogle($idToken: String!) {\r\n  signinGoogle(idToken: $idToken) {\r\n    accessToken\r\n    accessTokenExp\r\n    refreshToken\r\n  }\r\n}",
+										"variables": "{\r\n  \"idToken\": \"eyJhbGciOiJSUzI1NiIsImtpZCI6ImVkODA2ZjE4NDJiNTg4MDU0YjE4YjY2OWRkMWEwOWE0ZjM2N2FmYzQiLCJ0eXAiOiJKV1QifQ.eyJpc3MiOiJodHRwczovL2FjY291bnRzLmdvb2dsZS5jb20iLCJhenAiOiIzNDYzMDY3NDExOTgtOWRmNHFlbTBndWhzMzBkYmlua25jMWZ2OTdlcmpibGcuYXBwcy5nb29nbGV1c2VyY29udGVudC5jb20iLCJhdWQiOiIzNDYzMDY3NDExOTgtOWRmNHFlbTBndWhzMzBkYmlua25jMWZ2OTdlcmpibGcuYXBwcy5nb29nbGV1c2VyY29udGVudC5jb20iLCJzdWIiOiIxMDU5MTEyOTgyMjQ3NjE3Njg4NzgiLCJlbWFpbCI6InVhaW1lY0BnbWFpbC5jb20iLCJlbWFpbF92ZXJpZmllZCI6dHJ1ZSwiYXRfaGFzaCI6IkhLMGhVQ1BpNk1uNVpveTY3VFM5aWciLCJuYW1lIjoidWFpIG1lYyIsInBpY3R1cmUiOiJodHRwczovL2xoMy5nb29nbGV1c2VyY29udGVudC5jb20vYS9BQ2c4b2NMREloNnYxOFZMRGU3WHhIV1V2cGhVYV91dXlkYmFuQlBuVEpSSXMzR0g9czk2LWMiLCJnaXZlbl9uYW1lIjoidWFpIiwiZmFtaWx5X25hbWUiOiJtZWMiLCJsb2NhbGUiOiJlbiIsImlhdCI6MTcwODI5MDI2OCwiZXhwIjoxNzA4MjkzODY4fQ.RTVIhtCuQ-7ztLy8DDCCEFFHx0VF1qUArr2lKwUz6UNg4eWxkiLIc9B8iXAxZOPuvbk0_4fA6WeqcfUwyJzXDbCAhMmSdx5lOrBUH0hJnN6eWVxjig5eXyaGfELp3r5V1-EFhQocCQGSd1UNoE3JcYCRSkhNu1_o4GwoXoIIIHouZrpjjsogA6ZQ2mIBBIPY-ofrf6UOF-yINr5BkBSZoHHypA0aqEM-XEKuoCBR2pZrK7W1sKdLp1l7QUGZga7-5HBvm1x26JElam2aztt4JMtim2DjA8cvFSvhMQxXUTEd0UN369LRJL8jWd2sYchTvabr5XSUSjqmD54Xl2aGaQ\"\r\n}"
+									}
+								},
+								"url": {
+									"raw": "{{factorim_graphql_api_url}}",
+									"host": [
+										"{{factorim_graphql_api_url}}"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Inspect Google Token",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/x-www-form-urlencoded",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "id_token",
+											"value": "eyJhbGciOiJSUzI1NiIsImtpZCI6Ijg1ZTU1MTA3NDY2YjdlMjk4MzYxOTljNThjNzU4MWY1YjkyM2JlNDQiLCJ0eXAiOiJKV1QifQ.eyJpc3MiOiJodHRwczovL2FjY291bnRzLmdvb2dsZS5jb20iLCJhenAiOiIzNDYzMDY3NDExOTgtOWRmNHFlbTBndWhzMzBkYmlua25jMWZ2OTdlcmpibGcuYXBwcy5nb29nbGV1c2VyY29udGVudC5jb20iLCJhdWQiOiIzNDYzMDY3NDExOTgtOWRmNHFlbTBndWhzMzBkYmlua25jMWZ2OTdlcmpibGcuYXBwcy5nb29nbGV1c2VyY29udGVudC5jb20iLCJzdWIiOiIxMDU5MTEyOTgyMjQ3NjE3Njg4NzgiLCJlbWFpbCI6InVhaW1lY0BnbWFpbC5jb20iLCJlbWFpbF92ZXJpZmllZCI6dHJ1ZSwiYXRfaGFzaCI6IkFXYkpYMDlRa2JxRW5hZGdNeHZVaEEiLCJuYW1lIjoidWFpIG1lYyIsInBpY3R1cmUiOiJodHRwczovL2xoMy5nb29nbGV1c2VyY29udGVudC5jb20vYS9BQ2c4b2NMREloNnYxOFZMRGU3WHhIV1V2cGhVYV91dXlkYmFuQlBuVEpSSXMzR0g9czk2LWMiLCJnaXZlbl9uYW1lIjoidWFpIiwiZmFtaWx5X25hbWUiOiJtZWMiLCJsb2NhbGUiOiJlbiIsImlhdCI6MTcwNjcwMjg5NSwiZXhwIjoxNzA2NzA2NDk1fQ.o4qfrDiO9WBK_GuMZkAjxKDJobBB6FMkHGgnedV8yX7CXIQAz1-K6hV5TXwb_zzXlEue0Hq5TI76KTE7MgI8Cf2wHPdy0_mQzCSd4tBEcGBIkF4bDyQhHIWDukkzDuxddhc9tiPtUAg87miPWK5sqiQjHdoC1ZBDKJfaVGWcaJ56c_zSlFd_kmdguD6udodEROISnM12bUvxO79Tj7ttSl_hiEm-PUiYDabz8W9uFewsVTZX5hv8UlwsrL2fjH1rT2QujR2VoLMdoWra5H74uAJDpQlKN4kqPlLveF7X9KkjZ7ZFHV6o9MQ-NyP1pecL4iIEQnVzsZPOgrM1bq2p_A",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "https://oauth2.googleapis.com/tokeninfo",
+									"protocol": "https",
+									"host": [
+										"oauth2",
+										"googleapis",
+										"com"
+									],
+									"path": [
+										"tokeninfo"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Credentials",
+					"item": [
+						{
+							"name": "Sign In",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"// Set the new accessToken\r",
+											"pm.sendRequest(\"https://postman-echo.com/get\", function (err, response) {\r",
+											"    console.log(response.json());\r",
+											"});\r",
+											"var jsonData = JSON.parse(responseBody);\r",
+											"pm.collectionVariables.set(\"factorim_jwt\", jsonData.data.signin.accessToken);\r",
+											"pm.collectionVariables.set(\"factorim_refresh_token\", jsonData.data.signin.refreshToken);"
+										],
+										"type": "text/javascript"
+									}
+								},
+								{
+									"listen": "prerequest",
+									"script": {
+										"exec": [
+											""
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "graphql",
+									"graphql": {
+										"query": "mutation signin($data: SignInData!) {\r\n  signin(data: $data) {\r\n    accessToken\r\n    accessTokenExp\r\n    refreshToken\r\n  }\r\n}",
+										"variables": "{\r\n  \"data\": {\r\n    \"email\": \"admin@factorim.io\",\r\n    \"password\": \"secret42\"\r\n  }\r\n}"
+									}
+								},
+								"url": {
+									"raw": "{{factorim_graphql_api_url}}",
+									"host": [
+										"{{factorim_graphql_api_url}}"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Refresh Token",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"// Set the new accessToken\r",
+									"pm.sendRequest(\"https://postman-echo.com/get\", function (err, response) {\r",
+									"    console.log(response.json());\r",
+									"});\r",
+									"var jsonData = JSON.parse(responseBody);\r",
+									"pm.collectionVariables.set(\"factorim_jwt\", jsonData.data.refreshToken.accessToken);"
+								],
+								"type": "text/javascript"
+							}
+						},
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "graphql",
+							"graphql": {
+								"query": "mutation refreshToken($token: JWT!) {\r\n  refreshToken(token: $token) {\r\n    accessToken\r\n    accessTokenExp\r\n    refreshToken\r\n  }\r\n}",
+								"variables": "{\r\n  \"token\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6ImNsZDd4ZzB6ZzAwMDBtd2Y3NTY3b203OWYiLCJlbWFpbCI6ImFkbWluQGZhY3RvcmltLmlvIiwicm9sZXMiOlsiQURNSU4iLCJVU0VSIl0sImlhdCI6MTcwOTEzMDc2MywiZXhwIjoxNzA5MTM0MzYzfQ.OytYpOiK_wLG7XSL6_Nylxv48dx2842cesT1Zupq8xw\"\r\n}"
+							}
+						},
+						"url": {
+							"raw": "{{factorim_graphql_api_url}}",
+							"host": [
+								"{{factorim_graphql_api_url}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Sign Up Request",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "graphql",
+							"graphql": {
+								"query": " mutation signupRequest($data: SignUpRequestData!) {\r\n    signupRequest(data: $data) {\r\n      email\r\n      token\r\n    }\r\n  }",
+								"variables": "{\r\n  \"data\": {\r\n    \"email\": \"testuser@factorim.io\",\r\n    \"lang\": \"fr\"\r\n  }\r\n}"
+							}
+						},
+						"url": {
+							"raw": "{{factorim_graphql_api_url}}",
+							"host": [
+								"{{factorim_graphql_api_url}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Sign Up",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "graphql",
+							"graphql": {
+								"query": " mutation signup($data: SignUpData!) {\r\n    signup(data: $data) {\r\n      accessToken\r\n      refreshToken\r\n    }\r\n  }",
+								"variables": "{\r\n  \"data\": {\r\n      \"code\": \"307467\",\r\n      \"token\": \"31081884-71b0-4e53-ac99-9cea79600bc3\",\r\n      \"name\": \"nono\",\r\n      \"password\": \"secret42\"\r\n    }\r\n}"
+							}
+						},
+						"url": {
+							"raw": "{{factorim_graphql_api_url}}",
+							"host": [
+								"{{factorim_graphql_api_url}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Change Password Request",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "graphql",
+							"graphql": {
+								"query": "mutation resetPasswordRequest($data: ResetPasswordRequestData!) {\r\n  resetPasswordRequest(data: $data)\r\n}",
+								"variables": "{\r\n  \"data\": {\r\n    \"email\": \"admin@factorim.io\"\r\n  }\r\n}"
+							}
+						},
+						"url": {
+							"raw": "{{factorim_graphql_api_url}}",
+							"host": [
+								"{{factorim_graphql_api_url}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Reset Password Request",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "graphql",
+							"graphql": {
+								"query": "mutation resetPasswordRequest($data: ResetPasswordRequestData!) {\r\n  resetPasswordRequest(data: $data)\r\n}",
+								"variables": "{\r\n  \"data\": {\r\n    \"email\": \"testuser@factorim.io\"\r\n  }\r\n}"
+							}
+						},
+						"url": {
+							"raw": "{{factorim_graphql_api_url}}",
+							"host": [
+								"{{factorim_graphql_api_url}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Reset Password",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "graphql",
+							"graphql": {
+								"query": "mutation resetPassword($data: ResetPasswordData!) {\r\n  resetPassword(data: $data)\r\n}",
+								"variables": "{\r\n  \"data\": {\r\n    \"token\": \"e3c58e87-4f22-41e4-8946-30c8895d5bc7\",\r\n    \"password\": \"j%yeV2YPD4YpYh\"\r\n  }\r\n}"
+							}
+						},
+						"url": {
+							"raw": "{{factorim_graphql_api_url}}",
+							"host": [
+								"{{factorim_graphql_api_url}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Change Password",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{factorim_jwt}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "graphql",
+							"graphql": {
+								"query": "mutation changePassword($data: ChangePasswordData!) {\r\n  changePassword(data: $data)\r\n}",
+								"variables": "{\r\n  \"data\": {\r\n    \"password\": \"secret42\",\r\n    \"newPassword\": \"secret42\"\r\n  }\r\n}"
+							}
+						},
+						"url": {
+							"raw": "{{factorim_graphql_api_url}}",
+							"host": [
+								"{{factorim_graphql_api_url}}"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Email Templates",
+			"item": [
+				{
+					"name": "Get Email Templates",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{factorim_jwt}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "graphql",
+							"graphql": {
+								"query": "query emailTemplates($skip: Int!, $take: Int!) {\r\n  emailTemplates(skip: $skip, take: $take) {\r\n    emailTemplates {\r\n      id\r\n      type\r\n      subject\r\n      html\r\n      design\r\n      lang\r\n    }\r\n    totalCount\r\n  }\r\n}",
+								"variables": "{\r\n  \"take\": 5,\r\n  \"skip\": 0\r\n}"
+							}
+						},
+						"url": {
+							"raw": "{{factorim_graphql_api_url}}",
+							"host": [
+								"{{factorim_graphql_api_url}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Email Template",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "graphql",
+							"graphql": {
+								"query": "query emailTemplate($id: String!) {\r\n  emailTemplate(id: $id) {\r\n    id\r\n    type\r\n    subject\r\n    html\r\n    design\r\n    lang\r\n    createdAt\r\n  }\r\n}",
+								"variables": "{\r\n  \"id\": \"clsucth4x000cegijthjnafz5\"\r\n}"
+							}
+						},
+						"url": {
+							"raw": "{{factorim_graphql_api_url}}",
+							"host": [
+								"{{factorim_graphql_api_url}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create Email Template",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{factorim_jwt}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "graphql",
+							"graphql": {
+								"query": "mutation createEmailTemplate($data: CreateEmailTemplateData!) {\r\n  createEmailTemplate(data: $data) {\r\n    id\r\n  }\r\n}\r\n",
+								"variables": "{\r\n  \"data\": {\r\n    \"type\": \"SIGN_UP\",\r\n    \"subject\": \"Sign Up email\",\r\n    \"lang\": \"fr\",\r\n    \"html\": \"<div></div>\",\r\n    \"design\": {}\r\n  }\r\n}"
+							}
+						},
+						"url": {
+							"raw": "{{factorim_graphql_api_url}}",
+							"host": [
+								"{{factorim_graphql_api_url}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Email Template",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{factorim_jwt}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "graphql",
+							"graphql": {
+								"query": " mutation updateEmailTemplate(\r\n  $id: String!\r\n  $data: UpdateEmailTemplateData!\r\n) {\r\n  updateEmailTemplate(id: $id, data: $data) {\r\n    id\r\n  }\r\n}",
+								"variables": "{\r\n  \"id\": \"clsucth4x000cegijthjnafz5\",\r\n  \"data\": {\r\n    \"subject\": \"Sign up again\",\r\n    \"lang\": \"fr\"\r\n  }\r\n}"
+							}
+						},
+						"url": {
+							"raw": "{{factorim_graphql_api_url}}",
+							"host": [
+								"{{factorim_graphql_api_url}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Email Template",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{factorim_jwt}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "graphql",
+							"graphql": {
+								"query": " mutation deleteEmailTemplate($id: String!) {\r\n  deleteEmailTemplate(id: $id) {\r\n    id\r\n  }\r\n}",
+								"variables": "{\r\n  \"id\": \"clsuctlnc000degij21dysg3o\"\r\n}"
+							}
+						},
+						"url": {
+							"raw": "{{factorim_graphql_api_url}}",
+							"host": [
+								"{{factorim_graphql_api_url}}"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Email Validations",
+			"item": [
+				{
+					"name": "Cursor",
+					"item": [
+						{
+							"name": "Get Email Validations Cursor Previous",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"var jsonData = JSON.parse(responseBody);\r",
+											"pm.environment.set(\"nodes\", jsonData.data.nodes.nodes);\r",
+											""
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{factorim_jwt}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "graphql",
+									"graphql": {
+										"query": "query(\r\n  $last: Int!\r\n  $before: String!\r\n) {\r\n  emailValidations(\r\n    last: $last\r\n    before: $before\r\n  ) {\r\n    totalCount\r\n   \tpageInfo {\r\n    \thasNextPage\r\n      hasPreviousPage\r\n      startCursor\r\n      endCursor\r\n  \t}\r\n    \r\n    edges {\r\n      node {\r\n        id\r\n        type\r\n        token\r\n        email\r\n        code\r\n        checked\r\n        claimed\r\n        lang\r\n        createdAt\r\n        updatedAt\r\n      }\r\n    }\r\n  }\r\n}\r\n\r\n",
+										"variables": "{\r\n  \"last\": 4,\r\n  \"before\": \"\"\r\n}"
+									}
+								},
+								"url": {
+									"raw": "{{factorim_graphql_api_url}}",
+									"host": [
+										"{{factorim_graphql_api_url}}"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get Email Validations Cursor Next",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											""
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{factorim_jwt}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "graphql",
+									"graphql": {
+										"query": "query(\r\n  $first: Int!\r\n  $after: String!\r\n  $filters: EmailValidationFilterInput!\r\n  ) {\r\n  emailValidations(\r\n    first: $first\r\n    after: $after\r\n    filters: $filters\r\n  ) {\r\n    totalCount\r\n   \tpageInfo {\r\n    \thasNextPage\r\n      hasPreviousPage\r\n      startCursor\r\n      endCursor\r\n  \t}\r\n    \r\n    edges {\r\n      node {\r\n        id\r\n        type\r\n        token\r\n        email\r\n        code\r\n        checked\r\n        claimed\r\n        lang\r\n        createdAt\r\n        updatedAt\r\n      }\r\n    }\r\n  }\r\n}",
+										"variables": "{\r\n  \"first\": 4,\r\n  \"after\": \"\",\r\n  \"filters\": {\r\n    \"checked\": true\r\n  }\r\n}"
+									}
+								},
+								"url": {
+									"raw": "{{factorim_graphql_api_url}}",
+									"host": [
+										"{{factorim_graphql_api_url}}"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Get Email Validations",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{factorim_jwt}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "graphql",
+							"graphql": {
+								"query": "query emailValidations($skip: Int!, $take: Int!) {\r\n  emailValidations(skip: $skip, take: $take) {\r\n    emailValidations {\r\n      id\r\n      type\r\n      token\r\n      email\r\n      code\r\n      checked\r\n      claimed\r\n      lang\r\n    }\r\n    totalCount\r\n  }\r\n}",
+								"variables": "{\r\n  \"take\": 5,\r\n  \"skip\": 0\r\n}"
+							}
+						},
+						"url": {
+							"raw": "{{factorim_graphql_api_url}}",
+							"host": [
+								"{{factorim_graphql_api_url}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Email Validation",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{factorim_jwt}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "graphql",
+							"graphql": {
+								"query": "query emailValidation($id: String!) {\r\n  emailValidation(\r\n    id: $id\r\n  ) {\r\n    id\r\n    type\r\n    token\r\n    email\r\n    code\r\n    checked\r\n    claimed\r\n    lang\r\n  }\r\n}",
+								"variables": "{\r\n  \"id\": \"cltllq3iw00001tm384bzylb8\"\r\n}"
+							}
+						},
+						"url": {
+							"raw": "{{factorim_graphql_api_url}}",
+							"host": [
+								"{{factorim_graphql_api_url}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Email Validation by Token",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{factorim_jwt}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "graphql",
+							"graphql": {
+								"query": "query emailValidation($token: String!) {\r\n  emailValidation(\r\n    token: $token\r\n  ) {\r\n    id\r\n    type\r\n    token\r\n    email\r\n    code\r\n    checked\r\n    claimed\r\n    lang\r\n  }\r\n}",
+								"variables": "{\r\n  \"token\": \"e3c58e87-4f22-41e4-8946-30c8895d5bc7\"\r\n}"
+							}
+						},
+						"url": {
+							"raw": "{{factorim_graphql_api_url}}",
+							"host": [
+								"{{factorim_graphql_api_url}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get User Email Validation",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{factorim_jwt}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "graphql",
+							"graphql": {
+								"query": "query userEmailValidation($token: String!) {\r\n  userEmailValidation(\r\n    token: $token\r\n  ) {\r\n    id\r\n    type\r\n    token\r\n    email\r\n    code\r\n    checked\r\n    claimed\r\n    lang\r\n  }\r\n}",
+								"variables": "{\r\n  \"token\": \"5c0afc1c-91d1-42f9-b6ad-4f9d64c9d648\"\r\n}"
+							}
+						},
+						"url": {
+							"raw": "{{factorim_graphql_api_url}}",
+							"host": [
+								"{{factorim_graphql_api_url}}"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Posts",
+			"item": [
+				{
+					"name": "Offset",
+					"item": [
+						{
+							"name": "Get User Posts",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"var jsonData = JSON.parse(responseBody);\r",
+											"pm.environment.set(\"nodes\", jsonData.data.nodes.nodes);\r",
+											""
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{factorim_jwt}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "graphql",
+									"graphql": {
+										"query": "query userPosts($skip: Int!, $take: Int!, $filters: PostFilterInput) {\r\n  userPosts(skip: $skip, take: $take, filters: $filters) {\r\n    posts {\r\n      id\r\n      title\r\n      content\r\n      enabled\r\n      createdAt\r\n    }\r\n    totalCount\r\n  }\r\n}",
+										"variables": "{\r\n  \"take\": 0,\r\n  \"skip\": 0,\r\n  \"filters\": {\r\n    \"enabled\": true\r\n  }\r\n}"
+									}
+								},
+								"url": {
+									"raw": "{{factorim_graphql_api_url}}",
+									"host": [
+										"{{factorim_graphql_api_url}}"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get Posts",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"var jsonData = JSON.parse(responseBody);\r",
+											"pm.environment.set(\"nodes\", jsonData.data.nodes.nodes);\r",
+											""
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{factorim_jwt}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "graphql",
+									"graphql": {
+										"query": "query posts($skip: Int!, $take: Int!, $filters: PostFilterInput) {\r\n  posts(skip: $skip, take: $take, filters: $filters) {\r\n    posts {\r\n      id\r\n      title\r\n      content\r\n      enabled\r\n      createdAt\r\n      author {\r\n        id\r\n        email\r\n      }\r\n    }\r\n    totalCount\r\n  }\r\n}",
+										"variables": "{\r\n  \"take\": 0,\r\n  \"skip\": 0,\r\n  \"filters\": {\r\n    \"enabled\": true\r\n  }\r\n}"
+									}
+								},
+								"url": {
+									"raw": "{{factorim_graphql_api_url}}",
+									"host": [
+										"{{factorim_graphql_api_url}}"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Cursor",
+					"item": [
+						{
+							"name": "Get Posts Cursor Previous",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"var jsonData = JSON.parse(responseBody);\r",
+											"pm.environment.set(\"nodes\", jsonData.data.nodes.nodes);\r",
+											""
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{factorim_jwt}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "graphql",
+									"graphql": {
+										"query": "query(\r\n  $last: Int!\r\n  $before: String!\r\n  $filters: PostFilterInput!\r\n) {\r\n  postsCursor(\r\n    last: $last\r\n    before: $before\r\n    filters: $filters\r\n  ) {\r\n    totalCount\r\n   \tpageInfo {\r\n    \thasNextPage\r\n      hasPreviousPage\r\n      startCursor\r\n      endCursor\r\n  \t}\r\n    \r\n    edges {\r\n      node {\r\n        id\r\n        title\r\n        content\r\n        author {\r\n          id\r\n          email\r\n        }\r\n      }\r\n    }\r\n  }\r\n}\r\n\r\n",
+										"variables": "{\r\n  \"last\": 4,\r\n  \"before\": \"\",\r\n  \"filters\": {\r\n    \"enabled\": true\r\n  }\r\n}"
+									}
+								},
+								"url": {
+									"raw": "{{factorim_graphql_api_url}}",
+									"host": [
+										"{{factorim_graphql_api_url}}"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get Posts Cursor Next",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											""
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{factorim_jwt}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "graphql",
+									"graphql": {
+										"query": "query(\r\n  $first: Int!\r\n  $after: String!\r\n  $filters: PostFilterInput!\r\n  ) {\r\n  postsCursor(\r\n    first: $first\r\n    after: $after\r\n    filters: $filters\r\n  ) {\r\n    totalCount\r\n   \tpageInfo {\r\n    \thasNextPage\r\n      hasPreviousPage\r\n      startCursor\r\n      endCursor\r\n  \t}\r\n    \r\n    edges {\r\n      node {\r\n        id\r\n        title\r\n        content\r\n        author {\r\n          id\r\n          email\r\n        }\r\n      }\r\n    }\r\n  }\r\n}",
+										"variables": "{\r\n  \"first\": 4,\r\n  \"after\": \"\",\r\n  \"filters\": {\r\n    \"enabled\": true\r\n  }\r\n}"
+									}
+								},
+								"url": {
+									"raw": "{{factorim_graphql_api_url}}",
+									"host": [
+										"{{factorim_graphql_api_url}}"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Get Post",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript"
+							}
+						},
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									"var websites = pm.environment.get(\"websites\");\r",
+									"\r",
+									"if (websites.length) {\r",
+									"  const websiteId = websites[0].id\r",
+									"  pm.environment.set(\"websiteId\", websiteId);\r",
+									"  console.log(\"websiteId\", websiteId)\r",
+									"}\r",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "graphql",
+							"graphql": {
+								"query": "query post($id: String!) {\r\n  post(id: $id) {\r\n    id\r\n    title\r\n    content\r\n    enabled\r\n    createdAt\r\n    author {\r\n      id\r\n      email\r\n    }\r\n  }\r\n}",
+								"variables": "{\r\n  \"id\": \"clszeyzxa00052ld7h2c3c7lg\"\r\n}"
+							}
+						},
+						"url": {
+							"raw": "{{factorim_graphql_api_url}}",
+							"host": [
+								"{{factorim_graphql_api_url}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create Post",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{factorim_jwt}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "graphql",
+							"graphql": {
+								"query": "mutation createPost($data: CreatePostData!) {\r\n  createPost(data: $data) {\r\n    id\r\n  }\r\n}",
+								"variables": "{\r\n  \"data\": {\r\n    \"title\": \"my post 1\",\r\n    \"content\": \"my post content 1\"\r\n  }\r\n}"
+							}
+						},
+						"url": {
+							"raw": "{{factorim_graphql_api_url}}",
+							"host": [
+								"{{factorim_graphql_api_url}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create Post Service",
+					"request": {
+						"auth": {
+							"type": "apikey",
+							"apikey": [
+								{
+									"key": "value",
+									"value": "{{factorim_api_key}}",
+									"type": "string"
+								},
+								{
+									"key": "key",
+									"value": "X-API-KEY",
+									"type": "string"
+								},
+								{
+									"key": "in",
+									"value": "header",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "graphql",
+							"graphql": {
+								"query": "mutation createPostService(\r\n  $data: CreatePostData!\r\n  $relation: CreatePostRelation!\r\n  ) {\r\n  createPostService(\r\n    data: $data\r\n    relation: $relation\r\n  ) {\r\n    id\r\n  }\r\n}\r\n",
+								"variables": "{\r\n  \"data\": {\r\n    \"title\": \"my post 1\",\r\n    \"content\": \"my post content 1\"\r\n  },\r\n  \"relation\": {\r\n    \"userId\": \"cld7xg0zg0000mwf7567om79f\"\r\n  }\r\n}"
+							}
+						},
+						"url": {
+							"raw": "{{factorim_graphql_api_url}}",
+							"host": [
+								"{{factorim_graphql_api_url}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Post",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{factorim_jwt}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "graphql",
+							"graphql": {
+								"query": " mutation updatePost($id: String!, $data: UpdatePostData!) {\r\n  updatePost(id: $id, data: $data) {\r\n    id\r\n  }\r\n}",
+								"variables": "{\r\n  \"id\": \"clszeyzxa00052ld7h2c3c7lg\",\r\n  \"data\": {\r\n    \"title\": \"My Post updated\"\r\n  }\r\n}"
+							}
+						},
+						"url": {
+							"raw": "{{factorim_graphql_api_url}}",
+							"host": [
+								"{{factorim_graphql_api_url}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Post",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{factorim_jwt}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "graphql",
+							"graphql": {
+								"query": "mutation deletePost($id: String!) {\r\n  deletePost(id: $id) {\r\n    id\r\n  }\r\n}\r\n",
+								"variables": "{\r\n  \"id\": \"clszaetab0003h7c9jv027qyc\"\r\n}"
+							}
+						},
+						"url": {
+							"raw": "{{factorim_graphql_api_url}}",
+							"host": [
+								"{{factorim_graphql_api_url}}"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Profile",
+			"item": [
+				{
+					"name": "Update Profile",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{factorim_jwt}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "graphql",
+							"graphql": {
+								"query": " mutation updateProfile($data: UpdateProfileData!) {\r\n  updateProfile(data: $data)\r\n}",
+								"variables": "{\r\n  \"data\": {\r\n    \"name\": \"newadmin\",\r\n    \"lang\": \"fr\"\r\n  }\r\n}"
+							}
+						},
+						"url": {
+							"raw": "{{factorim_graphql_api_url}}",
+							"host": [
+								"{{factorim_graphql_api_url}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Change Email Request",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{factorim_jwt}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "graphql",
+							"graphql": {
+								"query": "mutation changeEmailRequest($data: ChangeEmailRequestData!) {\r\n  changeEmailRequest(data: $data)\r\n}",
+								"variables": "{\r\n  \"data\": {\r\n    \"email\": \"testuser@factorim.io\"\r\n  }\r\n}"
+							}
+						},
+						"url": {
+							"raw": "{{factorim_graphql_api_url}}",
+							"host": [
+								"{{factorim_graphql_api_url}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Change Email",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{factorim_jwt}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "graphql",
+							"graphql": {
+								"query": "mutation changeEmail($data: ChangeEmailData!) {\r\n  changeEmail(data: $data)\r\n}",
+								"variables": "{\r\n  \"data\": {\r\n    \"token\": \"eaa96a6d-edbf-4c54-b5fa-e106d387893b\",\r\n    \"code\": \"822346\"\r\n  }\r\n}"
+							}
+						},
+						"url": {
+							"raw": "{{factorim_graphql_api_url}}",
+							"host": [
+								"{{factorim_graphql_api_url}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Profile Request",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{factorim_jwt}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "graphql",
+							"graphql": {
+								"query": "mutation {\r\n  deleteProfileRequest\r\n}",
+								"variables": ""
+							}
+						},
+						"url": {
+							"raw": "{{factorim_graphql_api_url}}",
+							"host": [
+								"{{factorim_graphql_api_url}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Profile",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{factorim_jwt}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "graphql",
+							"graphql": {
+								"query": "mutation {\r\n  deleteProfile (\r\n    data: {\r\n      token: \"db616a06-6c14-4466-99d9-d9a298cc4b02\"\r\n      code: \"283391\"\r\n    }\r\n  )\r\n}",
+								"variables": ""
+							}
+						},
+						"url": {
+							"raw": "{{factorim_graphql_api_url}}",
+							"host": [
+								"{{factorim_graphql_api_url}}"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Stats",
+			"item": [
+				{
+					"name": "Get Stats",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{factorim_jwt}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "graphql",
+							"graphql": {
+								"query": "query {\r\n  countPosts\r\n  countUsers\r\n}",
+								"variables": ""
+							}
+						},
+						"url": {
+							"raw": "{{factorim_graphql_api_url}}",
+							"host": [
+								"{{factorim_graphql_api_url}}"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Users",
+			"item": [
+				{
+					"name": "Get Me",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{factorim_jwt}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "graphql",
+							"graphql": {
+								"query": "query {\r\n  me {\r\n    id\r\n    email\r\n    roles\r\n  }\r\n}",
+								"variables": ""
+							}
+						},
+						"url": {
+							"raw": "{{factorim_graphql_api_url}}",
+							"host": [
+								"{{factorim_graphql_api_url}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Users",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{factorim_jwt}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "graphql",
+							"graphql": {
+								"query": "query users(\r\n    $skip: Int!,\r\n    $take: Int!,\r\n    $filters: UserFilterInput\r\n  ) {\r\n  users(skip: $skip, take: $take, filters: $filters) {\r\n    users {\r\n      id\r\n      email\r\n      roles\r\n      lang\r\n      theme\r\n      status\r\n      createdAt\r\n    }\r\n    totalCount\r\n  }\r\n}\r\n",
+								"variables": "{\r\n  \"take\": 5,\r\n  \"skip\": 0,\r\n  \"filters\": {\r\n    \"keyword\": \"\"\r\n  }\r\n}"
+							}
+						},
+						"url": {
+							"raw": "{{factorim_graphql_api_url}}",
+							"host": [
+								"{{factorim_graphql_api_url}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Users Service",
+					"request": {
+						"auth": {
+							"type": "apikey",
+							"apikey": [
+								{
+									"key": "value",
+									"value": "{{factorim_api_key}}",
+									"type": "string"
+								},
+								{
+									"key": "key",
+									"value": "X-API-KEY",
+									"type": "string"
+								},
+								{
+									"key": "in",
+									"value": "header",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "graphql",
+							"graphql": {
+								"query": "query usersService {\r\n  usersService {\r\n    users {\r\n      id\r\n      email\r\n      roles\r\n    }\r\n    totalCount\r\n  }\r\n}",
+								"variables": ""
+							}
+						},
+						"url": {
+							"raw": "{{factorim_graphql_api_url}}",
+							"host": [
+								"{{factorim_graphql_api_url}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get User",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{factorim_jwt}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "graphql",
+							"graphql": {
+								"query": "query user($id: String!) {\r\n  user(id: $id) {\r\n    id\r\n    email\r\n    status\r\n    createdAt\r\n  }\r\n}",
+								"variables": "{\r\n  \"id\": \"cld7xg0zg0000mwf7567om79f\"\r\n}"
+							}
+						},
+						"url": {
+							"raw": "{{factorim_graphql_api_url}}",
+							"host": [
+								"{{factorim_graphql_api_url}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create User",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{factorim_jwt}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "graphql",
+							"graphql": {
+								"query": "mutation createUser($data: CreateUserData!) {\r\n  createUser (\r\n    data :$data\r\n  ) {\r\n    id\r\n  }\r\n}",
+								"variables": "{\r\n  \"data\": {\r\n    \"email\": \"newuser@factorim.io\",\r\n    \"name\": \"newuser\",\r\n    \"password\": \"secret42\"\r\n  }\r\n}"
+							}
+						},
+						"url": {
+							"raw": "{{factorim_graphql_api_url}}",
+							"host": [
+								"{{factorim_graphql_api_url}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update User",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{factorim_jwt}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "graphql",
+							"graphql": {
+								"query": "mutation updateUser($id: String!, $data: UpdateUserData!) {\r\n  updateUser (\r\n    data : $data\r\n    id: $id\r\n  ) {\r\n    id\r\n  }\r\n}",
+								"variables": "{\r\n  \"id\": \"cltmxpo3a0000ykt47chxvxjz\",\r\n  \"data\": {\r\n    \"name\": \"newusername\"\r\n  }\r\n}"
+							}
+						},
+						"url": {
+							"raw": "{{factorim_graphql_api_url}}",
+							"host": [
+								"{{factorim_graphql_api_url}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete User",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{factorim_jwt}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "graphql",
+							"graphql": {
+								"query": "mutation deleteUser($id: String!) {\r\n  deleteUser (\r\n    id: $id\r\n  ) {\r\n    id\r\n  }\r\n}",
+								"variables": "{\r\n  \"id\": \"cltmxpo3a0000ykt47chxvxjz\"\r\n}"
+							}
+						},
+						"url": {
+							"raw": "{{factorim_graphql_api_url}}",
+							"host": [
+								"{{factorim_graphql_api_url}}"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "factorim_graphql_api_url",
+			"value": "http://localhost:4000/graphql",
+			"type": "string"
+		},
+		{
+			"key": "factorim_jwt",
+			"value": ""
+		},
+		{
+			"key": "factorim_jwt",
+			"value": ""
+		},
+		{
+			"key": "factorim_refresh_token",
+			"value": ""
+		},
+		{
+			"key": "factorim_api_key",
+			"value": "JustChangeMe",
+			"type": "string"
+		}
+	]
+}

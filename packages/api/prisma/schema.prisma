@@ -1,0 +1,107 @@
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+generator client {
+  provider      = "prisma-client-js"
+  binaryTargets = ["native", "debian-openssl-1.1.x", "debian-openssl-3.0.x", "linux-musl", "linux-musl-openssl-3.0.x"]
+}
+
+generator dbml {
+  provider = "prisma-dbml-generator"
+}
+
+model User {
+  id           String   @id @default(cuid())
+  createdAt    DateTime @default(now())
+  updatedAt    DateTime @updatedAt
+  lastActiveAt DateTime @default(now())
+
+  auth     UserAuth   @default(CREDENTIALS)
+  email    String     @unique
+  password String?
+  name     String?
+  roles    UserRole[] @default([USER])
+  status   UserStatus @default(PENDING)
+
+  lang  Lang   @default(en)
+  theme String @default("light")
+
+  posts Post[]
+
+  @@map("users")
+}
+
+model Post {
+  id        String   @id @default(cuid())
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+  title     String
+  content   String
+  enabled   Boolean  @default(true)
+
+  author   User?   @relation(fields: [authorId], references: [id], onDelete: Cascade)
+  authorId String?
+
+  @@map("posts")
+}
+
+model EmailValidation {
+  id        String    @id @default(cuid())
+  createdAt DateTime  @default(now())
+  updatedAt DateTime  @updatedAt
+  type      EmailType
+  token     String    @unique
+  email     String
+  code      String?
+  checked   Int       @default(0)
+  claimed   Boolean   @default(false)
+  lang      Lang      @default(en)
+
+  @@map("email_validations")
+}
+
+model EmailTemplate {
+  id        String    @id @default(cuid())
+  createdAt DateTime  @default(now())
+  updatedAt DateTime  @updatedAt
+  type      EmailType
+  subject   String
+  lang      Lang      @default(en)
+  html      String
+  design    Json
+
+  @@map("email_templates")
+}
+
+// Enums
+
+enum UserAuth {
+  CREDENTIALS
+  GOOGLE
+}
+
+enum UserRole {
+  ADMIN
+  USER
+}
+
+enum UserStatus {
+  ACTIVE
+  INACTIVE
+  SUSPENDED
+  PENDING
+}
+
+enum Lang {
+  en
+  fr
+}
+
+enum EmailType {
+  SIGN_UP
+  RESET_PASSWORD
+  CHANGE_EMAIL
+  DELETE_ACCOUNT
+}

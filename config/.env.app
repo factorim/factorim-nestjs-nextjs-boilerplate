@@ -1,0 +1,22 @@
+# Env
+PORT=3000
+
+# API
+NEXT_PUBLIC_API_GRAPHQL_URL=http://localhost:4000/graphql
+NEXT_PUBLIC_API_GRAPHQL_WS_URL=ws://localhost:4000/graphql
+API_INTERNAL_GRAPHQL_URL=http://factorim-api-demo:4000/graphql
+API_INTERNAL_GRAPHQL_WS_URL=ws://factorim-api-demo:4000/graphql
+
+# Auth
+AUTH_SECRET=JustChangeMe
+AUTH_SESSION_MAX_AGE=3600
+AUTH_GOOGLE_CLIENT_ID=JustChangeMe
+AUTH_GOOGLE_CLIENT_SECRET=JustChangeMe
+NEXT_PUBLIC_AUTH_JWT_REFRESH_IN=300
+
+# Social
+NEXT_PUBLIC_SOCIAL_GITHUB_URL=https://github.com/factorim/factorim-nestjs-nextjs-graphql
+NEXT_PUBLIC_SOCIAL_TWITTER_URL=https://twitter.com/factorimio
+
+# Analytics
+NEXT_PUBLIC_GOOGLE_TAG_MANAGER_ID=GTM-5VSFX7TR

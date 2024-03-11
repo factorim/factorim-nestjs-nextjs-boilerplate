@@ -71,7 +71,7 @@ async function main() {
   if (!postExists) {
     await seedPosts()
   } else {
-    console.log('Users already seeded')
+    console.log('Posts already seeded')
   }
 
   const emailTemplateExists = await prisma.emailTemplate.findFirst()

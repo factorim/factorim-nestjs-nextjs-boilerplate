@@ -102,7 +102,7 @@ For deployment with Kubernetes, refer to the [Factorim Boilerplate Kubernetes De
 The project includes the following features:
 
 - GraphQL API with [Prisma](https://www.prisma.io/) for data management.
-- OAuth authentication with [NextAuth](https://next-auth.js.org/.
+- OAuth authentication with [NextAuth](https://next-auth.js.org/).
 - Translation support with [react-i18next](https://github.com/i18next/react-i18next).
 - [Storybook](https://storybook.js.org/) for developing and testing components.
 - Email template edition with [React Email Editor](https://github.com/unlayer/react-email-editor).

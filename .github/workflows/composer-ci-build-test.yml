@@ -1,0 +1,84 @@
+name: Composer CI - Build and Test
+
+on:
+  pull_request:
+    branches: [main]
+    paths:
+      - "packages/composer/**"
+
+jobs:
+  build-and-test:
+    name: "CI - Build and Test"
+    runs-on: ubuntu-latest
+
+    strategy:
+      matrix:
+        node-version: [20]
+
+    defaults:
+      run:
+        working-directory: ./packages/composer
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Setup pnpm
+        uses: pnpm/action-setup@v3
+        with:
+          version: 8
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: ${{ matrix.node-version }}
+          cache: "pnpm"
+          cache-dependency-path: ./packages/composer/pnpm-lock.yaml
+
+      - name: Install npm dependencies
+        run: pnpm install
+
+      - name: Lint
+        run: pnpm run lint
+
+      - name: Build
+        run: pnpm run build
+
+  version-bump-verification:
+    name: "CI - Version Bump Verification"
+    runs-on: ubuntu-latest
+    needs: build-and-test
+    permissions:
+      contents: read
+      packages: write
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Login to GitHub Container Registry
+        uses: docker/login-action@v3
+        with:
+          registry: ghcr.io
+          username: ${{ github.actor }}
+          password: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Get version from package.json
+        id: package-version
+        uses: martinbeentjes/npm-get-version-action@v1.3.1
+        with:
+          path: ./packages/composer
+
+      - name: Check if Docker image exists
+        id: check-image
+        run: |
+          current_version="${{ steps.package-version.outputs.current-version }}"
+          image_name="ghcr.io/factorim/factorim-composer-demo:$current_version"
+          manifest=$(docker manifest inspect "$image_name" 2>&1) || true
+          if [[ $manifest == *"manifest unknown"* ]]; then
+            echo "Docker image $image_name does not exists. ✅ New version correctly set: $current_version."
+            echo "image_exists=false" >> $GITHUB_OUTPUT
+          else
+            echo "Docker image $image_name already exists. Please bump the version in package.json and try again."
+            echo "image_exists=true" >> $GITHUB_OUTPUT
+            exit 1
+          fi

@@ -1,0 +1,85 @@
+//// ------------------------------------------------------
+//// THIS FILE WAS AUTOMATICALLY GENERATED (DO NOT MODIFY)
+//// ------------------------------------------------------
+
+Table users {
+  id String [pk]
+  createdAt DateTime [default: `now()`, not null]
+  updatedAt DateTime [not null]
+  lastActiveAt DateTime [default: `now()`, not null]
+  auth UserAuth [not null, default: 'CREDENTIALS']
+  email String [unique, not null]
+  password String
+  name String
+  roles UserRole[] [not null]
+  status UserStatus [not null, default: 'PENDING']
+  lang Lang [not null, default: 'en']
+  theme String [not null, default: 'light']
+  posts posts [not null]
+}
+
+Table posts {
+  id String [pk]
+  createdAt DateTime [default: `now()`, not null]
+  updatedAt DateTime [not null]
+  title String [not null]
+  content String [not null]
+  enabled Boolean [not null, default: true]
+  author users
+  authorId String
+}
+
+Table email_validations {
+  id String [pk]
+  createdAt DateTime [default: `now()`, not null]
+  updatedAt DateTime [not null]
+  type EmailType [not null]
+  token String [unique, not null]
+  email String [not null]
+  code String
+  checked Int [not null, default: 0]
+  claimed Boolean [not null, default: false]
+  lang Lang [not null, default: 'en']
+}
+
+Table email_templates {
+  id String [pk]
+  createdAt DateTime [default: `now()`, not null]
+  updatedAt DateTime [not null]
+  type EmailType [not null]
+  subject String [not null]
+  lang Lang [not null, default: 'en']
+  html String [not null]
+  design Json [not null]
+}
+
+Enum UserAuth {
+  CREDENTIALS
+  GOOGLE
+}
+
+Enum UserRole {
+  ADMIN
+  USER
+}
+
+Enum UserStatus {
+  ACTIVE
+  INACTIVE
+  SUSPENDED
+  PENDING
+}
+
+Enum Lang {
+  en
+  fr
+}
+
+Enum EmailType {
+  SIGN_UP
+  RESET_PASSWORD
+  CHANGE_EMAIL
+  DELETE_ACCOUNT
+}
+
+Ref: posts.authorId > users.id [delete: Cascade]

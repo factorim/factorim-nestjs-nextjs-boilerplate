@@ -1,0 +1,40 @@
+version: '3.7'
+
+services:
+  factorim-api-demo:
+    container_name: factorim-api-demo
+    image: ghcr.io/factorim/factorim-api-demo:latest
+    command: ["./scripts/wait-for-it.sh", "factorim-postgres:5432", "--", "/docker-entrypoint.sh"]
+    ports:
+      - 4000:4000
+    env_file:
+      - ./config/.env.api
+
+  factorim-app-demo:
+    container_name: factorim-app-demo
+    image: ghcr.io/factorim/factorim-app-demo:latest
+    ports:
+      - 3000:3000
+    env_file:
+      - ./config/.env.app
+    
+
+  factorim-composer-demo:
+    container_name: factorim-composer-demo
+    image: ghcr.io/factorim/factorim-composer-demo:latest
+    ports:
+      - 4001:4001
+    env_file:
+      - ./config/.env.composer
+
+  factorim-postgres-demo:
+    container_name: factorim-postgres-demo
+    image: postgres:16.1-alpine
+    ports:
+      - 5432:5432
+    env_file:
+      - ./config/.env.postgres
+
+networks:
+  factorim-network:
+    external: true

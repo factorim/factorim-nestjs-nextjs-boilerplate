@@ -1,0 +1,419 @@
+# ------------------------------------------------------
+# THIS FILE WAS AUTOMATICALLY GENERATED (DO NOT MODIFY)
+# ------------------------------------------------------
+
+input ChangeEmailData {
+  code: String!
+  token: String!
+}
+
+input ChangeEmailRequestData {
+  email: String!
+}
+
+input ChangePasswordData {
+  newPassword: String!
+  password: String!
+}
+
+input CreateEmailTemplateData {
+  design: JSONObject!
+  html: String!
+  lang: Lang!
+  subject: String!
+  type: EmailType!
+}
+
+input CreatePostData {
+  content: String!
+  enabled: Boolean
+  title: String!
+}
+
+input CreatePostRelation {
+  userId: String
+}
+
+input CreateUserData {
+  email: String!
+  name: String!
+  password: String!
+  roles: [UserRole!]
+}
+
+"""
+A date-time string at UTC, such as 2019-12-03T09:54:33Z, compliant with the date-time format.
+"""
+scalar DateTime
+
+input DeleteProfileData {
+  code: String!
+  token: String!
+}
+
+type EmailTemplate {
+  """Identifies the date and time when the object was created."""
+  createdAt: DateTime!
+
+  """Email Template design JSON."""
+  design: JSONObject!
+
+  """Email Template HTML."""
+  html: String!
+  id: ID!
+
+  """Email Template lang."""
+  lang: Lang!
+
+  """Email Template subject."""
+  subject: String!
+
+  """Email Template type."""
+  type: EmailType!
+
+  """Identifies the date and time when the object was last updated."""
+  updatedAt: DateTime!
+}
+
+type EmailTemplateOffsetConnection {
+  emailTemplates: [EmailTemplate!]!
+  totalCount: Int!
+}
+
+"""Email Validation type"""
+enum EmailType {
+  CHANGE_EMAIL
+  DELETE_ACCOUNT
+  RESET_PASSWORD
+  SIGN_UP
+}
+
+type EmailValidation {
+  """Email Validation checked."""
+  checked: Int!
+
+  """Email Validation claimed."""
+  claimed: Boolean!
+
+  """Email Validation code."""
+  code: String!
+
+  """Identifies the date and time when the object was created."""
+  createdAt: DateTime!
+
+  """Email Validation email."""
+  email: String!
+  id: ID!
+
+  """Email Validation lang."""
+  lang: Lang!
+
+  """Email Validation token."""
+  token: String!
+
+  """Email Validation type."""
+  type: EmailType!
+
+  """Identifies the date and time when the object was last updated."""
+  updatedAt: DateTime!
+}
+
+type EmailValidationCursorConnection {
+  edges: [EmailValidationEdge!]
+  pageInfo: PageInfo!
+  totalCount: Int!
+}
+
+type EmailValidationEdge {
+  cursor: String!
+  node: EmailValidation!
+}
+
+type EmailValidationEvent {
+  """Event EmailValidation."""
+  emailValidation: EmailValidation
+
+  """Event type."""
+  type: EmailValidationEventType
+}
+
+"""EmailValidation Event types"""
+enum EmailValidationEventType {
+  CREATED
+  UPDATED
+}
+
+input EmailValidationFilterInput {
+  checked: Boolean
+  claimed: Boolean
+  keyword: String
+}
+
+"""
+The `JSONObject` scalar type represents JSON objects as specified by [ECMA-404](http://www.ecma-international.org/publications/files/ECMA-ST/ECMA-404.pdf).
+"""
+scalar JSONObject @specifiedBy(url: "http://www.ecma-international.org/publications/files/ECMA-ST/ECMA-404.pdf")
+
+"""
+A field whose value is a JSON Web Token (JWT): https://jwt.io/introduction.
+"""
+scalar JWT
+
+"""Supported languages"""
+enum Lang {
+  en
+  fr
+}
+
+type Mutation {
+  changeEmail(data: ChangeEmailData!): Boolean!
+  changeEmailRequest(data: ChangeEmailRequestData!): String!
+  changePassword(data: ChangePasswordData!): Boolean!
+  createEmailTemplate(data: CreateEmailTemplateData!): EmailTemplate!
+  createPost(data: CreatePostData!): Post!
+  createPostService(data: CreatePostData!, relation: CreatePostRelation): Post!
+  createUser(data: CreateUserData!): User!
+  deleteEmailTemplate(id: String!): EmailTemplate!
+  deletePost(id: String!): Post!
+  deleteProfile(data: DeleteProfileData!): Boolean!
+  deleteProfileRequest: String!
+  deleteUser(id: String!): User!
+  duplicateEmailTemplate(id: String!): EmailTemplate!
+  refreshToken(token: JWT!): Token!
+  resetPassword(data: ResetPasswordData!): Boolean!
+  resetPasswordRequest(data: ResetPasswordRequestData!): String!
+  signin(data: SignInData!): Token!
+  signinGoogle(idToken: String!): Token!
+  signup(data: SignUpData!): Token!
+  signupRequest(data: SignUpRequestData!): SignUpRequest!
+  updateEmailTemplate(data: UpdateEmailTemplateData!, id: String!): EmailTemplate!
+  updatePost(data: UpdatePostData!, id: String!): Post!
+  updateProfile(data: UpdateProfileData!): Boolean!
+  updateUser(data: UpdateUserData!, id: String!): User!
+}
+
+type PageInfo {
+  endCursor: String
+  hasNextPage: Boolean!
+  hasPreviousPage: Boolean!
+  startCursor: String
+}
+
+type Post {
+  """Post author."""
+  author: User!
+
+  """Post content."""
+  content: String!
+
+  """Identifies the date and time when the object was created."""
+  createdAt: DateTime!
+
+  """Post enabled."""
+  enabled: Boolean!
+  id: ID!
+
+  """Post title."""
+  title: String!
+
+  """Identifies the date and time when the object was last updated."""
+  updatedAt: DateTime!
+}
+
+type PostCursorConnection {
+  edges: [PostEdge!]
+  pageInfo: PageInfo!
+  totalCount: Int!
+}
+
+type PostEdge {
+  cursor: String!
+  node: Post!
+}
+
+type PostEvent {
+  """Event Post."""
+  post: Post
+
+  """Event type."""
+  type: PostEventType
+}
+
+"""Post Event types"""
+enum PostEventType {
+  CREATED
+  DELETED
+  UPDATED
+}
+
+input PostFilterInput {
+  enabled: Boolean
+  keyword: String
+}
+
+type PostOffsetConnection {
+  posts: [Post!]!
+  totalCount: Int!
+}
+
+type Query {
+  countEmailTemplates: Int!
+  countPosts: Int!
+  countUsers(filters: UserFilterInput): Int!
+  emailTemplate(id: String!): EmailTemplate!
+  emailTemplates(skip: Int = 0, take: Int): EmailTemplateOffsetConnection!
+  emailValidation(id: String, token: String): EmailValidation
+  emailValidations(after: String, before: String, filters: EmailValidationFilterInput, first: Int, last: Int): EmailValidationCursorConnection!
+  me: User!
+  post(id: String): Post!
+  posts(filters: PostFilterInput, skip: Int = 0, take: Int): PostOffsetConnection!
+  postsCursor(after: String, before: String, filters: PostFilterInput, first: Int, last: Int): PostCursorConnection!
+  user(email: String, id: String): User!
+  userEmailValidation(token: String!): EmailValidation
+  userPost(id: String): Post!
+  userPosts(filters: PostFilterInput, skip: Int = 0, take: Int): PostOffsetConnection!
+  users(filters: UserFilterInput, skip: Int = 0, take: Int): UserOffsetConnection!
+  usersService(filters: UserFilterInput, skip: Int = 0, take: Int): UserOffsetConnection!
+}
+
+input ResetPasswordData {
+  password: String!
+  token: String!
+}
+
+input ResetPasswordRequestData {
+  email: String!
+}
+
+input SignInData {
+  email: String!
+  password: String!
+}
+
+input SignUpData {
+  code: String!
+  name: String!
+  password: String!
+  token: String!
+}
+
+type SignUpRequest {
+  """SignUpRequest email."""
+  email: String!
+
+  """SignUpRequest token."""
+  token: String!
+}
+
+input SignUpRequestData {
+  email: String!
+  lang: Lang!
+}
+
+type Subscription {
+  emailValidationEvent: EmailValidationEvent!
+  postEvent: PostEvent!
+}
+
+type Token {
+  """JWT access token"""
+  accessToken: JWT!
+
+  """JWT access token expiration date"""
+  accessTokenExp: Int!
+
+  """JWT refresh token"""
+  refreshToken: JWT!
+}
+
+input UpdateEmailTemplateData {
+  design: JSONObject
+  html: String
+  lang: Lang
+  subject: String
+  type: EmailType
+}
+
+input UpdatePostData {
+  content: String
+  enabled: Boolean
+  title: String
+}
+
+input UpdateProfileData {
+  lang: Lang
+  name: String
+  theme: String
+}
+
+input UpdateUserData {
+  email: String
+  name: String
+  roles: [UserRole!]
+}
+
+type User {
+  """User Auth."""
+  auth: UserAuth!
+
+  """Identifies the date and time when the object was created."""
+  createdAt: DateTime!
+
+  """User email."""
+  email: String!
+  id: ID!
+
+  """User lang."""
+  lang: Lang!
+
+  """User last active at."""
+  lastActiveAt: DateTime!
+
+  """User name."""
+  name: String
+
+  """User password."""
+  password: String!
+
+  """User roles."""
+  roles: [UserRole!]!
+
+  """User status."""
+  status: UserStatus!
+
+  """User theme."""
+  theme: String!
+
+  """Identifies the date and time when the object was last updated."""
+  updatedAt: DateTime!
+}
+
+"""User Auth"""
+enum UserAuth {
+  CREDENTIALS
+  GOOGLE
+}
+
+input UserFilterInput {
+  keyword: String
+  status: UserStatus
+}
+
+type UserOffsetConnection {
+  totalCount: Int!
+  users: [User!]!
+}
+
+"""User role"""
+enum UserRole {
+  ADMIN
+  USER
+}
+
+"""User status"""
+enum UserStatus {
+  ACTIVE
+  INACTIVE
+  PENDING
+  SUSPENDED
+}

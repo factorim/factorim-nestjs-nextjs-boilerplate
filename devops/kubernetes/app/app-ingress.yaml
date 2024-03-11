@@ -1,0 +1,16 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: factorim-app-ingress
+spec:
+  rules:
+    - host: app.factorim.io
+      http:
+        paths:
+          - path: /
+            pathType: Prefix
+            backend:
+              service:
+                name: factorim-app-service
+                port:
+                  number: 3000

@@ -64,5 +64,5 @@ jobs:
           file: ./packages/composer/Dockerfile
           push: true
           tags: |
-            ghcr.io/${{ github.repository }}/factorim-composer:${{ steps.package-version.outputs.current-version}}
-            ghcr.io/${{ github.repository }}/factorim-composer:latest
+            ghcr.io/factorim/factorim-composer-demo:${{ steps.package-version.outputs.current-version}}
+            ghcr.io/factorim/factorim-composer-demo:latest

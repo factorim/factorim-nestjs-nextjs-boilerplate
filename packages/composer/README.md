@@ -1,6 +1,6 @@
 # Factorim Composer
 
-NestJS application.
+NestJS application designed to automatically generate posts using OpenAI.
 
 ## Development
 

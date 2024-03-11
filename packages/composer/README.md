@@ -26,3 +26,7 @@ Config values for `.env`, `.env.example`:
 | API_GRAPHQL_WS_URL | GraphQL Web Socket url      |                             |
 | API_KEY            | API Key for service account |                             |
 | OPENAI_API_KEY     | OpenAPI API Key             |                             |
+
+## About
+
+This is a [NestJS](https://nestjs.com/) project.

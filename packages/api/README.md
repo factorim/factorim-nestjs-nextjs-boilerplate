@@ -1,6 +1,6 @@
 # Factorim API
 
-NestJS GraphQL API.
+NestJS application designed to expose a GraphQL API.
 
 ## Development
 

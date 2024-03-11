@@ -1,6 +1,6 @@
 # Factorim App
 
-Next.js application.
+Next.js application designed to showcase a user-friendly Tailwind interface.
 
 ## Development
 

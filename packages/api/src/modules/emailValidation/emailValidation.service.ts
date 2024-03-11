@@ -29,6 +29,7 @@ export class EmailValidationService {
 
   replaceVariables = (html: string, emailValidation: EmailValidation) => {
     const appConfig = this.configService.get<AppConfig>('app')
+    const emailConfig = this.configService.get<EmailConfig>('email')
     const validationLink = new URL(
       `reset-password/${emailValidation.token}`,
       appConfig.url,
@@ -36,6 +37,10 @@ export class EmailValidationService {
     return html
       .replace(/{{validation_code}}/g, emailValidation.code)
       .replace(/{{validation_link}}/g, validationLink.href)
+      .replace(
+        /{{validation_expiration}}/g,
+        emailConfig.validationExpiration.toString(),
+      )
   }
 
   async sendSignupRequest(emailValidation: EmailValidation) {

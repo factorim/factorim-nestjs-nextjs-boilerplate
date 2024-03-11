@@ -1,0 +1,89 @@
+name: App CD - Publish Docker Image
+
+on:
+  pull_request:
+    branches: [release]
+    paths:
+      - "packages/app/**"
+
+jobs:
+  publish-docker-image:
+    name: "CD - Push Docker image to registry"
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      packages: write
+
+    strategy:
+      matrix:
+        node-version: [20]
+
+    defaults:
+      run:
+        working-directory: ./packages/app
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Login to GitHub Container Registry
+        uses: docker/login-action@v3
+        with:
+          registry: ghcr.io
+          username: ${{ github.actor }}
+          password: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Set up QEMU
+        uses: docker/setup-qemu-action@v3
+
+      - name: Set up Docker Buildx
+        uses: docker/setup-buildx-action@v3
+
+      - name: Get version from package.json
+        id: package-version
+        uses: martinbeentjes/npm-get-version-action@v1.3.1
+        with:
+          path: ./packages/app
+
+      - name: Check if Docker image exists
+        id: check-image
+        run: |
+          current_version="${{ steps.package-version.outputs.current-version }}"
+          image_name="ghcr.io/factorim/factorim-app-demo:$current_version"
+          manifest=$(docker manifest inspect "$image_name" 2>&1) || true
+          if [[ $manifest == *"manifest unknown"* ]]; then
+            echo "Docker image $image_name does not exists. ✅ New version correctly set: $current_version."
+            echo "image_exists=false" >> $GITHUB_OUTPUT
+          else
+            echo "Docker image $image_name already exists. Please bump the version in package.json and try again."
+            echo "image_exists=true" >> $GITHUB_OUTPUT
+            exit 1
+          fi
+
+      - name: Create .env file
+        uses: ./.github/actions/create-env-app
+        with:
+          node_env: ${{ vars.NODE_ENV }}
+          graphql_url: ${{ vars.API_GRAPHQL_URL }}
+          graphql_ws_url: ${{ vars.API_GRAPHQL_WS_URL }}
+          internal_graphql_url: ${{ vars.FACTORIM_INTERNAL_API_GRAPHQL_URL }}
+          internal_graphql_ws_url: ${{ vars.FACTORIM_INTERNAL_API_GRAPHQL_WS_URL }}
+          auth_secret: ${{ secrets.AUTH_SECRET }}
+          auth_jwt_refresh_in: ${{ vars.AUTH_JWT_REFRESH_IN }}
+          auth_session_max_age: ${{ vars.AUTH_SESSION_MAX_AGE }}
+          auth_google_client_id: ${{ vars.AUTH_GOOGLE_CLIENT_ID }}
+          auth_google_client_secret: ${{ secrets.AUTH_GOOGLE_CLIENT_SECRET }}
+          social_github_url: ${{ vars.SOCIAL_GITHUB_URL }}
+          social_twitter_url: ${{ vars.SOCIAL_TWITTER_URL }}
+          gtm_id: ${{ vars.GOOGLE_TAG_MANAGER_ID }}
+
+      - name: Build and Push Docker image
+        if: steps.check-image.outputs.image_exists == 'false'
+        uses: docker/build-push-action@v5
+        with:
+          context: ./packages/app
+          file: ./packages/app/Dockerfile
+          push: true
+          tags: |
+            ghcr.io/${{ github.repository }}/factorim-app:${{ steps.package-version.outputs.current-version}}
+            ghcr.io/${{ github.repository }}/factorim-app:latest

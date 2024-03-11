@@ -85,5 +85,5 @@ jobs:
           file: ./packages/app/Dockerfile
           push: true
           tags: |
-            ghcr.io/${{ github.repository }}/factorim-app:${{ steps.package-version.outputs.current-version}}
-            ghcr.io/${{ github.repository }}/factorim-app:latest
+            ghcr.io/factorim/factorim-app-demo:${{ steps.package-version.outputs.current-version}}
+            ghcr.io/factorim/factorim-app-demo:latest
